@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SERIAE</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="assets/js/translations.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>SERIAE</h1>
+            </div>
+            <div class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="dashboard.html" class="nav-link active" data-translate="nav.dashboard">Dashboard</a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.buyer.menu">Buyer Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="coming-soon.html" class="dropdown-item">Browse Collections</a>
+                        <a href="coming-soon.html" class="dropdown-item">Active Auctions</a>
+                        <a href="coming-soon.html" class="dropdown-item">Bidding History</a>
+                        <a href="coming-soon.html" class="dropdown-item">Watchlist</a>
+                        <a href="coming-soon.html" class="dropdown-item">Purchase History</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger">Seller Menu <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="coming-soon.html" class="dropdown-item">Product Registration</a>
+                        <a href="coming-soon.html" class="dropdown-item">Product List</a>
+                        <a href="coming-soon.html" class="dropdown-item">Exhibition List</a>
+                        <a href="coming-soon.html" class="dropdown-item">Sales Analytics</a>
+                        <a href="coming-soon.html" class="dropdown-item">Consignment Status</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger">User Management <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="coming-soon.html" class="dropdown-item">Terms of Use</a>
+                        <a href="coming-soon.html" class="dropdown-item">Contact Us</a>
+                        <a href="coming-soon.html" class="dropdown-item">Support Center</a>
+                        <a href="coming-soon.html" class="dropdown-item">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-dropdown language-toggle">
+                    <a href="#" class="nav-link dropdown-trigger">EN <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" data-lang="en" data-translate="common.english">English</a>
+                        <a href="#" class="dropdown-item" data-lang="ja" data-translate="common.japanese">日本語</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown profile-menu">
+                    <a href="#" class="nav-link dropdown-trigger profile-trigger">Profile <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu profile-dropdown">
+                        <div class="profile-header">
+                            <div class="profile-avatar">S</div>
+                            <div class="profile-info">
+                                <span class="profile-name">Seriae Member</span>
+                                <span class="profile-status">Premium</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="profile.html" class="dropdown-item">My Profile</a>
+                        <a href="coming-soon.html" class="dropdown-item">Account Settings</a>
+                        <a href="coming-soon.html" class="dropdown-item">Shipping Address</a>
+                        <a href="coming-soon.html" class="dropdown-item">Bank Accounts</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/" class="dropdown-item logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3 data-translate="sidebar.account.center">Account Center</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link active">
+                    <span class="sidebar-icon">📊</span>
+                    Dashboard
+                </a>
+                <a href="profile.html" class="sidebar-link">
+                    <span class="sidebar-icon">👤</span>
+                    Profile
+                </a>
+                <a href="coming-soon.html" class="sidebar-link">
+                    <span class="sidebar-icon">👥</span>
+                    Team Management
+                </a>
+                <a href="coming-soon.html" class="sidebar-link">
+                    <span class="sidebar-icon">🔒</span>
+                    Change Password
+                </a>
+                <a href="coming-soon.html" class="sidebar-link">
+                    <span class="sidebar-icon">⚙️</span>
+                    Settings
+                </a>
+                <a href="coming-soon.html" class="sidebar-link">
+                    <span class="sidebar-icon">📍</span>
+                    Shipping Address
+                </a>
+                <a href="coming-soon.html" class="sidebar-link">
+                    <span class="sidebar-icon">🏦</span>
+                    Bank Accounts
+                </a>
+            </nav>
+        </aside>
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1 data-translate="dashboard.title">Dashboard</h1>
+                <p class="dashboard-subtitle" data-translate="dashboard.subtitle">Welcome to your exclusive Seriae experience</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- News from Management -->
+                <div class="dashboard-card news-card">
+                    <div class="card-header">
+                        <h2>News from Management</h2>
+                        <span class="card-badge">Latest</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="news-item">
+                            <div class="news-date">December 15, 2024</div>
+                            <h3>Exclusive Holiday Collection</h3>
+                            <p>Discover our curated selection of rare Hermès pieces, including a pristine Birkin 35 in Rouge H and limited edition timepieces from Patek Philippe.</p>
+                            <a href="coming-soon.html" class="news-link">Read More</a>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">December 12, 2024</div>
+                            <h3>Authentication Standards Update</h3>
+                            <p>We've enhanced our verification process with new technology ensuring 99.9% accuracy in luxury goods authentication.</p>
+                            <a href="coming-soon.html" class="news-link">Learn More</a>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">December 10, 2024</div>
+                            <h3>Private Geneva Showroom Opening</h3>
+                            <p>Join us for an exclusive viewing of exceptional pieces at our new Geneva location on December 20th.</p>
+                            <a href="coming-soon.html" class="news-link">RSVP</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending and Returned Items -->
+                <div class="dashboard-card items-card">
+                    <div class="card-header">
+                        <h2>Pending & Returned Items</h2>
+                        <span class="card-status">3 Items</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="item-row">
+                            <div class="item-info">
+                                <div class="item-image">LV</div>
+                                <div class="item-details">
+                                    <h4>Louis Vuitton Neverfull MM</h4>
+                                    <p>Authentication in progress</p>
+                                </div>
+                            </div>
+                            <div class="item-status pending">Pending</div>
+                        </div>
+                        <div class="item-row">
+                            <div class="item-info">
+                                <div class="item-image">CH</div>
+                                <div class="item-details">
+                                    <h4>Chanel Classic Flap Medium</h4>
+                                    <p>Returned for additional verification</p>
+                                </div>
+                            </div>
+                            <div class="item-status returned">Returned</div>
+                        </div>
+                        <div class="item-row">
+                            <div class="item-info">
+                                <div class="item-image">RX</div>
+                                <div class="item-details">
+                                    <h4>Rolex Submariner</h4>
+                                    <p>Final quality check</p>
+                                </div>
+                            </div>
+                            <div class="item-status pending">Pending</div>
+                        </div>
+                        <a href="coming-soon.html" class="view-all-link">View All Items</a>
+                    </div>
+                </div>
+
+                <!-- Bidding Auction Information -->
+                <div class="dashboard-card auction-card">
+                    <div class="card-header">
+                        <h2>Bidding Auction Information</h2>
+                        <span class="card-badge live">Live</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="auction-item">
+                            <div class="auction-info">
+                                <h4>Hermès Birkin 35 Togo Leather</h4>
+                                <div class="auction-details">
+                                    <span class="current-bid">Current Bid: $18,500</span>
+                                    <span class="time-remaining">2h 15m remaining</span>
+                                </div>
+                            </div>
+                            <div class="bid-status winning">Winning</div>
+                        </div>
+                        <div class="auction-item">
+                            <div class="auction-info">
+                                <h4>Patek Philippe Nautilus</h4>
+                                <div class="auction-details">
+                                    <span class="current-bid">Current Bid: $65,000</span>
+                                    <span class="time-remaining">45m remaining</span>
+                                </div>
+                            </div>
+                            <div class="bid-status outbid">Outbid</div>
+                        </div>
+                        <div class="auction-item">
+                            <div class="auction-info">
+                                <h4>Chanel Boy Bag Limited Edition</h4>
+                                <div class="auction-details">
+                                    <span class="current-bid">Current Bid: $4,200</span>
+                                    <span class="time-remaining">1d 3h remaining</span>
+                                </div>
+                            </div>
+                            <div class="bid-status watching">Watching</div>
+                        </div>
+                        <a href="coming-soon.html" class="view-all-link">View All Auctions</a>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="dashboard-card actions-card">
+                    <div class="card-header">
+                        <h2>Quick Actions</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="action-buttons">
+                            <button class="action-btn primary" onclick="window.location.href='coming-soon.html'">
+                                <span class="action-icon">➕</span>
+                                List New Item
+                            </button>
+                            <button class="action-btn secondary" onclick="window.location.href='coming-soon.html'">
+                                <span class="action-icon">🔍</span>
+                                Browse Collections
+                            </button>
+                            <button class="action-btn secondary" onclick="window.location.href='coming-soon.html'">
+                                <span class="action-icon">📊</span>
+                                View Analytics
+                            </button>
+                            <button class="action-btn secondary" onclick="window.location.href='coming-soon.html'">
+                                <span class="action-icon">💬</span>
+                                Contact Support
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

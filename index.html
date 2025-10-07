@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERIAE - Exclusive Luxury Resale</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="assets/js/translations.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>SERIAE</h1>
+            </div>
+            <div class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="dashboard.html" class="nav-link" data-translate="nav.dashboard">Dashboard</a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.buyer.menu">Buyer Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="buyer.browse.collections">Browse Collections</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="buyer.active.auctions">Active Auctions</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="buyer.bidding.history">Bidding History</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="buyer.watchlist">Watchlist</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="buyer.purchase.history">Purchase History</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.seller.menu">Seller Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="seller.product.registration">Product Registration</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="seller.product.list">Product List</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="seller.exhibition.list">Exhibition List</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="seller.sales.analytics">Sales Analytics</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="seller.consignment.status">Consignment Status</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.user.management">User Management</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="user.terms.of.use">Terms of Use</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="user.contact.us">Contact Us</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="user.support.center">Support Center</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="user.privacy.policy">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-dropdown language-toggle">
+                    <a href="#" class="nav-link dropdown-trigger">EN <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" data-lang="en" data-translate="common.english">English</a>
+                        <a href="#" class="dropdown-item" data-lang="ja" data-translate="common.japanese">日本語</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown profile-menu">
+                    <a href="#" class="nav-link dropdown-trigger profile-trigger"><span data-translate="nav.profile">Profile</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu profile-dropdown">
+                        <div class="profile-header">
+                            <div class="profile-avatar">S</div>
+                            <div class="profile-info">
+                                <span class="profile-name" data-translate="profile.member.name">Seriae Member</span>
+                                <span class="profile-status" data-translate="profile.member.status">Premium</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="profile.my.profile">My Profile</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="profile.account.settings">Account Settings</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="profile.shipping.address">Shipping Address</a>
+                        <a href="coming-soon.html" class="dropdown-item" data-translate="profile.bank.accounts">Bank Accounts</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="coming-soon.html" class="dropdown-item logout" data-translate="nav.logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-3d-container">
+                <div class="luxury-showcase">
+                    <!-- Louis Vuitton Neverfull Silhouette -->
+                    <div class="product-3d neverfull" data-product="neverfull">
+                        <div class="bag-silhouette">
+                            <div class="bag-body">
+                                <div class="handle-left"></div>
+                                <div class="handle-right"></div>
+                            </div>
+                        </div>
+                        <div class="luxury-glow"></div>
+                    </div>
+
+                    <!-- Chanel Classic Flap Silhouette -->
+                    <div class="product-3d chanel" data-product="chanel">
+                        <div class="bag-silhouette">
+                            <div class="bag-body">
+                                <div class="quilted-pattern"></div>
+                            </div>
+                            <div class="chain-strap"></div>
+                        </div>
+                        <div class="luxury-glow"></div>
+                    </div>
+
+                    <!-- Hermès Birkin Silhouette -->
+                    <div class="product-3d birkin" data-product="birkin">
+                        <div class="bag-silhouette">
+                            <div class="bag-body">
+                                <div class="handle-left"></div>
+                                <div class="handle-right"></div>
+                                <div class="lock"></div>
+                            </div>
+                        </div>
+                        <div class="luxury-glow"></div>
+                    </div>
+
+                    <!-- Gucci Jackie Silhouette -->
+                    <div class="product-3d gucci" data-product="gucci">
+                        <div class="bag-silhouette">
+                            <div class="bag-body">
+                                <div class="piston-closure"></div>
+                            </div>
+                            <div class="bamboo-handle"></div>
+                        </div>
+                        <div class="luxury-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title"><span data-translate="hero.title.line1">Curated Excellence.</span><br><span data-translate="hero.title.line2">Timeless Luxury.</span></h1>
+                <p class="hero-subtitle" data-translate="hero.subtitle">The world's most distinguished pre-owned luxury pieces,<br>authenticated and curated for the discerning collector</p>
+                <div class="hero-actions">
+                    <button class="btn-primary large" onclick="window.location.href='coming-soon.html'" data-translate="hero.btn.collections">View Collections</button>
+                    <button class="btn-secondary large" onclick="window.location.href='coming-soon.html'" data-translate="hero.btn.consignment">Private Consignment</button>
+                </div>
+            </div>
+            <div class="hero-prestige">
+                <div class="prestige-item">
+                    <span class="prestige-number" data-translate="prestige.since">Since 1987</span>
+                    <span class="prestige-label" data-translate="prestige.heritage">Heritage</span>
+                </div>
+                <div class="prestige-divider"></div>
+                <div class="prestige-item">
+                    <span class="prestige-number" data-translate="prestige.percent">100%</span>
+                    <span class="prestige-label" data-translate="prestige.authenticated">Authenticated</span>
+                </div>
+                <div class="prestige-divider"></div>
+                <div class="prestige-item">
+                    <span class="prestige-number" data-translate="prestige.private">Private</span>
+                    <span class="prestige-label" data-translate="prestige.membership">Membership</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-auctions">
+            <div class="section-header">
+                <h2 data-translate="auctions.title">Current Selections</h2>
+                <p data-translate="auctions.subtitle">Exceptional pieces available now</p>
+            </div>
+            <div class="auction-grid">
+                <div class="auction-card">
+                    <div class="auction-image">
+                        <div class="placeholder-image">Neverfull MM</div>
+                        <div class="availability-indicator"></div>
+                    </div>
+                    <div class="auction-info">
+                        <div class="item-details">
+                            <h3 data-translate="product.neverfull">Neverfull MM Damier Ebene</h3>
+                            <p class="brand" data-translate="product.brand.lv">Louis Vuitton</p>
+                            <p class="year">2019 · <span data-translate="product.condition.pristine">Pristine Condition</span></p>
+                        </div>
+                        <div class="pricing">
+                            <div class="current-price">
+                                <span class="amount">$1,850</span>
+                            </div>
+                            <div class="auction-status">
+                                <span class="time-remaining">6<span data-translate="time.hours">h</span> <span data-translate="time.remaining">remaining</span></span>
+                            </div>
+                        </div>
+                        <button class="btn-primary full-width" onclick="window.location.href='coming-soon.html'" data-translate="auctions.submit.interest">Submit Interest</button>
+                    </div>
+                </div>
+
+                <div class="auction-card">
+                    <div class="auction-image">
+                        <div class="placeholder-image">Classic Flap</div>
+                        <div class="availability-indicator active"></div>
+                    </div>
+                    <div class="auction-info">
+                        <div class="item-details">
+                            <h3 data-translate="product.chanel.flap">Classic Flap Medium</h3>
+                            <p class="brand" data-translate="product.brand.chanel">Chanel</p>
+                            <p class="year">2021 · <span data-translate="product.condition.excellent">Excellent Condition</span></p>
+                        </div>
+                        <div class="pricing">
+                            <div class="current-price">
+                                <span class="amount">$4,200</span>
+                            </div>
+                            <div class="auction-status">
+                                <span class="time-remaining" data-translate="auctions.active.bidding">Active bidding</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary full-width" onclick="window.location.href='coming-soon.html'" data-translate="auctions.submit.interest">Submit Interest</button>
+                    </div>
+                </div>
+
+                <div class="auction-card featured">
+                    <div class="auction-image">
+                        <div class="placeholder-image">Birkin 35</div>
+                        <div class="availability-indicator premium"></div>
+                    </div>
+                    <div class="auction-info">
+                        <div class="item-details">
+                            <h3 data-translate="product.birkin">Birkin 35 Togo Leather</h3>
+                            <p class="brand" data-translate="product.brand.hermes">Hermès</p>
+                            <p class="year">2020 · <span data-translate="product.condition.museum">Museum Quality</span></p>
+                        </div>
+                        <div class="pricing">
+                            <div class="current-price">
+                                <span class="amount">$18,500</span>
+                            </div>
+                            <div class="auction-status">
+                                <span class="time-remaining" data-translate="auctions.by.appointment">By appointment</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary full-width" onclick="window.location.href='coming-soon.html'" data-translate="auctions.private.viewing">Private Viewing</button>
+                    </div>
+                </div>
+
+                <div class="auction-card">
+                    <div class="auction-image">
+                        <div class="placeholder-image">GMT-Master II</div>
+                        <div class="availability-indicator"></div>
+                    </div>
+                    <div class="auction-info">
+                        <div class="item-details">
+                            <h3 data-translate="product.gmt.master">GMT-Master II Pepsi</h3>
+                            <p class="brand" data-translate="product.brand.rolex">Rolex</p>
+                            <p class="year">2022 · <span data-translate="product.condition.unworn">Unworn</span></p>
+                        </div>
+                        <div class="pricing">
+                            <div class="current-price">
+                                <span class="amount">$22,800</span>
+                            </div>
+                            <div class="auction-status">
+                                <span class="time-remaining">2<span data-translate="time.hours">h</span> <span data-translate="time.remaining">remaining</span></span>
+                            </div>
+                        </div>
+                        <button class="btn-primary full-width" onclick="window.location.href='coming-soon.html'" data-translate="auctions.submit.interest">Submit Interest</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="philosophy">
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <h2 data-translate="philosophy.title">The Seriae Philosophy</h2>
+                    <p data-translate="philosophy.text1">Excellence is not an achievement but a standard. Every piece in our collection represents a legacy of craftsmanship, authenticated through our rigorous verification process and curated by our team of luxury specialists.</p>
+                    <p data-translate="philosophy.text2">We believe that luxury transcends ownership—it embodies artistry, heritage, and the pursuit of perfection.</p>
+                </div>
+                <div class="philosophy-stats">
+                    <div class="philosophy-stat">
+                        <span class="stat-number">3,847</span>
+                        <span class="stat-label" data-translate="philosophy.pieces.authenticated">Pieces Authenticated</span>
+                    </div>
+                    <div class="philosophy-stat">
+                        <span class="stat-number">127</span>
+                        <span class="stat-label" data-translate="philosophy.luxury.partners">Luxury Partners</span>
+                    </div>
+                    <div class="philosophy-stat">
+                        <span class="stat-number">37</span>
+                        <span class="stat-label" data-translate="philosophy.years.experience">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SERIAE</h3>
+                <p data-translate="footer.tagline">Curating excellence in luxury resale since 1987</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-translate="footer.collections">Collections</h4>
+                <ul>
+                    <li><a href="coming-soon.html" data-translate="footer.handbags.accessories">Handbags & Accessories</a></li>
+                    <li><a href="coming-soon.html" data-translate="footer.fine.timepieces">Fine Timepieces</a></li>
+                    <li><a href="coming-soon.html" data-translate="footer.private.consignment">Private Consignment</a></li>
+                    <li><a href="coming-soon.html" data-translate="footer.authentication.services">Authentication Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-translate="footer.experience">Experience</h4>
+                <ul>
+                    <li><a href="coming-soon.html" data-translate="footer.private.showroom">Private Showroom</a></li>
+                    <li><a href="coming-soon.html" data-translate="footer.personal.curator">Personal Curator</a></li>
+                    <li><a href="coming-soon.html" data-translate="footer.member.services">Member Services</a></li>
+                    <li><a href="coming-soon.html" data-translate="footer.heritage.stories">Heritage Stories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer.copyright">&copy; 2024 Seriae. All rights reserved. | London | New York | Geneva</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
