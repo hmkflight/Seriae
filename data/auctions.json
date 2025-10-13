@@ -1,0 +1,92 @@
+{
+  "bids": [
+    {
+      "id": "bid-001",
+      "itemId": "lv-neverfull-mm-001",
+      "userId": "user-001",
+      "amount": 1850,
+      "timestamp": "2024-12-17T10:30:00Z",
+      "status": "active"
+    },
+    {
+      "id": "bid-002",
+      "itemId": "ch-classic-flap-002",
+      "userId": "user-002",
+      "amount": 4200,
+      "timestamp": "2024-12-17T14:15:00Z",
+      "status": "active"
+    },
+    {
+      "id": "bid-003",
+      "itemId": "rx-gmt-master-004",
+      "userId": "user-003",
+      "amount": 22800,
+      "timestamp": "2024-12-17T16:45:00Z",
+      "status": "active"
+    },
+    {
+      "id": "bid-004",
+      "itemId": "ch-boy-008",
+      "userId": "user-001",
+      "amount": 5200,
+      "timestamp": "2024-12-17T11:20:00Z",
+      "status": "active"
+    }
+  ],
+  "history": [
+    {
+      "id": "purchase-001",
+      "itemId": "lv-speedy-007",
+      "itemTitle": "Speedy 30 Monogram",
+      "brand": "Louis Vuitton",
+      "finalPrice": 1180,
+      "purchasedAt": "2024-11-15T18:00:00Z",
+      "status": "delivered",
+      "trackingNumber": "1Z999AA10123456784"
+    },
+    {
+      "id": "purchase-002",
+      "itemId": "gu-marmont-005",
+      "itemTitle": "GG Marmont Small Shoulder Bag",
+      "brand": "Gucci",
+      "finalPrice": 1680,
+      "purchasedAt": "2024-10-22T20:00:00Z",
+      "status": "delivered",
+      "trackingNumber": "1Z999AA10123456785"
+    },
+    {
+      "id": "purchase-003",
+      "itemId": "pr-reedition-006",
+      "itemTitle": "Re-Edition 2005 Re-Nylon Bag",
+      "brand": "Prada",
+      "finalPrice": 1290,
+      "purchasedAt": "2024-09-10T16:30:00Z",
+      "status": "delivered",
+      "trackingNumber": "1Z999AA10123456786"
+    }
+  ],
+  "myBids": [
+    {
+      "bidId": "user-bid-001",
+      "itemId": "ch-classic-flap-002",
+      "itemTitle": "Classic Flap Medium",
+      "brand": "Chanel",
+      "myAmount": 4000,
+      "currentHighBid": 4200,
+      "myStatus": "outbid",
+      "placedAt": "2024-12-17T09:00:00Z",
+      "endsAt": "2024-12-19T20:00:00Z"
+    },
+    {
+      "bidId": "user-bid-002",
+      "itemId": "rx-gmt-master-004",
+      "itemTitle": "GMT-Master II Pepsi",
+      "brand": "Rolex",
+      "myAmount": 22800,
+      "currentHighBid": 22800,
+      "myStatus": "winning",
+      "placedAt": "2024-12-17T12:30:00Z",
+      "endsAt": "2024-12-18T16:00:00Z"
+    }
+  ]
+}

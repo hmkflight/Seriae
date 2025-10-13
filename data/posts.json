@@ -1,0 +1,76 @@
+{
+  "posts": [
+    {
+      "id": "post-001",
+      "slug": "exclusive-holiday-collection",
+      "title": "Exclusive Holiday Collection",
+      "date": "2024-12-15",
+      "category": "News",
+      "cover": "/assets/img/news/holiday-collection.jpg",
+      "summary": "Discover our curated selection of rare Hermès pieces, including a pristine Birkin 35 in Rouge H and limited edition timepieces from Patek Philippe.",
+      "bodyHTML": "<p>This holiday season, SERIAE presents an extraordinary collection of the world's most coveted luxury pieces. From rare Hermès handbags to exceptional Swiss timepieces, each item has been meticulously authenticated and curated for the discerning collector.</p><p>Highlights include a museum-quality Birkin 35 in the iconic Rouge H colorway, a limited edition Patek Philippe Nautilus, and several pristine Chanel Classic Flaps from recent collections.</p><p>All pieces are available for private viewing at our Geneva, London, and New York showrooms by appointment.</p>",
+      "tags": ["hermès", "patek-philippe", "holiday", "collection"],
+      "author": "SERIAE Curation Team"
+    },
+    {
+      "id": "post-002",
+      "slug": "authentication-standards-update",
+      "title": "Authentication Standards Update",
+      "date": "2024-12-12",
+      "category": "Updates",
+      "cover": "/assets/img/news/authentication.jpg",
+      "summary": "We've enhanced our verification process with new technology ensuring 99.9% accuracy in luxury goods authentication.",
+      "bodyHTML": "<p>SERIAE is proud to announce a significant advancement in our authentication protocols. Working with leading experts in luxury goods verification, we've implemented cutting-edge technology that ensures unprecedented accuracy.</p><p>Our enhanced process includes:</p><ul><li>Advanced material analysis using spectroscopy</li><li>Microscopic hardware examination</li><li>Serial number verification with brand databases</li><li>Craftsmanship quality assessment by certified specialists</li></ul><p>Every item that enters our marketplace undergoes this rigorous multi-point inspection, guaranteeing authenticity and quality for our members.</p>",
+      "tags": ["authentication", "technology", "quality", "trust"],
+      "author": "Dr. Marie Laurent, Chief Authentication Officer"
+    },
+    {
+      "id": "post-003",
+      "slug": "geneva-showroom-opening",
+      "title": "Private Geneva Showroom Opening",
+      "date": "2024-12-10",
+      "category": "Events",
+      "cover": "/assets/img/news/geneva-showroom.jpg",
+      "summary": "Join us for an exclusive viewing of exceptional pieces at our new Geneva location on December 20th.",
+      "bodyHTML": "<p>SERIAE is delighted to announce the opening of our newest private showroom in the heart of Geneva's prestigious shopping district. Located steps from Place du Molard, this intimate space has been designed to provide the ultimate luxury shopping experience.</p><p>The inaugural exhibition, 'Hermès Heritage Collection,' will showcase twelve extraordinary pieces including rare Birkin and Kelly bags, as well as exceptional timepieces.</p><p>Private appointments are now available for December 20-22. Champagne reception and personal styling consultations included.</p>",
+      "tags": ["geneva", "showroom", "event", "hermès"],
+      "author": "SERIAE Events Team"
+    },
+    {
+      "id": "post-004",
+      "slug": "investment-guide-luxury-handbags",
+      "title": "Investment Guide: Luxury Handbags 2024",
+      "date": "2024-11-28",
+      "category": "Guides",
+      "cover": "/assets/img/news/investment-guide.jpg",
+      "summary": "Expert insights on which luxury handbags appreciate in value and how to build a collection with both style and smart investment potential.",
+      "bodyHTML": "<p>The luxury handbag market has consistently demonstrated strong value retention and appreciation, particularly for iconic models from heritage brands. This guide explores the factors that drive investment value.</p><h3>Top Investment Pieces 2024</h3><p>Hermès Birkin and Kelly bags continue to lead the market, with some models appreciating 10-15% annually. Chanel Classic Flaps maintain strong value, while Louis Vuitton's limited editions show promising growth.</p><h3>Key Investment Criteria</h3><ul><li>Brand heritage and reputation</li><li>Rarity and limited availability</li><li>Condition and provenance</li><li>Classic design with timeless appeal</li><li>Original accessories and documentation</li></ul><p>Our specialists are available to consult on building your collection with both aesthetic and investment considerations in mind.</p>",
+      "tags": ["investment", "guide", "handbags", "collecting"],
+      "author": "James Morrison, Senior Luxury Consultant"
+    },
+    {
+      "id": "post-005",
+      "slug": "rolex-sports-models-2024",
+      "title": "Rolex Sports Models: 2024 Market Overview",
+      "date": "2024-11-15",
+      "category": "Market Reports",
+      "cover": "/assets/img/news/rolex-sports.jpg",
+      "summary": "A comprehensive look at the pre-owned market for Rolex's most sought-after sports watches, including Submariner, GMT-Master II, and Daytona.",
+      "bodyHTML": "<p>The pre-owned Rolex sports watch market continues to show robust demand and stable pricing in 2024. This report analyzes current trends across key models.</p><h3>Market Highlights</h3><p>The GMT-Master II 'Pepsi' (126710BLRO) remains highly sought after, with premiums of 80-100% over retail. The Submariner Date maintains steady value, while the Daytona continues to command significant premiums.</p><h3>Buying Recommendations</h3><p>Current market conditions favor buyers seeking full sets (complete with box and papers) from recent years. Models from 2020-2023 offer the best combination of modern features and value stability.</p>",
+      "tags": ["rolex", "sports-watches", "market-report", "timepieces"],
+      "author": "SERIAE Market Research"
+    },
+    {
+      "id": "post-006",
+      "slug": "sustainable-luxury-prada-re-nylon",
+      "title": "Sustainable Luxury: The Rise of Eco-Conscious Design",
+      "date": "2024-10-30",
+      "category": "Trends",
+      "cover": "/assets/img/news/sustainable-luxury.jpg",
+      "summary": "How luxury brands like Prada are leading the sustainability movement without compromising on quality or desirability.",
+      "bodyHTML": "<p>The luxury industry is undergoing a significant transformation as brands embrace sustainability. Prada's Re-Nylon initiative exemplifies how heritage houses are innovating while maintaining their signature aesthetic.</p><h3>The Re-Nylon Revolution</h3><p>Prada's regenerated nylon is produced from recycled ocean plastics and textile waste. The Re-Edition 2005 bag has become a modern icon, proving that sustainability and desirability are not mutually exclusive.</p><h3>Market Response</h3><p>Eco-conscious luxury items are seeing strong demand from younger collectors who value both heritage craftsmanship and environmental responsibility. Pre-owned luxury naturally aligns with sustainability principles, extending the lifecycle of exceptional pieces.</p>",
+      "tags": ["sustainability", "prada", "eco-conscious", "trends"],
+      "author": "Sophie Chen, Sustainability Editor"
+    }
+  ]
+}

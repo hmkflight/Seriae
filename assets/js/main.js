@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // LUXURY BAG SILHOUETTES SHOWCASE SYSTEM
+    // INITIALIZE CORE SERVICES
+    if (window.DataService) {
+        window.DataService.init();
+    }
+
+    // LUXURY BAG SILHOUETTES SHOWCASE SYSTEM (Homepage only)
     const luxuryBags = [
         { name: 'neverfull', displayName: 'Louis Vuitton Neverfull', brand: 'Louis Vuitton' },
         { name: 'chanel', displayName: 'Chanel Classic Flap', brand: 'Chanel' },

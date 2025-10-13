@@ -1,0 +1,75 @@
+{
+  "profile": {
+    "id": "user-001",
+    "firstName": "Alexandre",
+    "lastName": "Dubois",
+    "email": "alexandre.dubois@luxury.com",
+    "phone": "+33 1 42 86 87 88",
+    "memberSince": "2020-01-15",
+    "membershipTier": "Premium",
+    "verified": true,
+    "avatar": "S",
+    "preferredLanguage": "en",
+    "timezone": "Europe/Paris",
+    "currency": "USD"
+  },
+  "interests": ["Hermès", "Chanel", "Louis Vuitton", "Rolex"],
+  "notifications": {
+    "auctionAlerts": true,
+    "biddingUpdates": true,
+    "newsletter": false,
+    "priceDrops": true
+  },
+  "addresses": [
+    {
+      "id": "addr-001",
+      "type": "billing",
+      "name": "Alexandre Dubois",
+      "street": "45 Avenue Montaigne",
+      "city": "Paris",
+      "state": "Île-de-France",
+      "postalCode": "75008",
+      "country": "France",
+      "phone": "+33 1 42 86 87 88",
+      "isDefault": true
+    },
+    {
+      "id": "addr-002",
+      "type": "shipping",
+      "name": "Alexandre Dubois",
+      "street": "12 Rue de Rivoli",
+      "city": "Paris",
+      "state": "Île-de-France",
+      "postalCode": "75004",
+      "country": "France",
+      "phone": "+33 1 42 86 87 88",
+      "isDefault": false
+    }
+  ],
+  "banks": [
+    {
+      "id": "bank-001",
+      "bankName": "BNP Paribas",
+      "accountType": "Checking",
+      "accountNumber": "****6789",
+      "routingNumber": "BNPAFRPP",
+      "isDefault": true,
+      "addedAt": "2020-01-20"
+    },
+    {
+      "id": "bank-002",
+      "bankName": "Crédit Agricole",
+      "accountType": "Savings",
+      "accountNumber": "****4321",
+      "routingNumber": "AGRIFRPP",
+      "isDefault": false,
+      "addedAt": "2021-06-15"
+    }
+  ],
+  "stats": {
+    "totalPurchases": 3,
+    "totalSpent": 4150,
+    "activeBids": 2,
+    "watchlistCount": 5
+  }
+}

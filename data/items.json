@@ -1,0 +1,264 @@
+{
+  "items": [
+    {
+      "id": "lv-neverfull-mm-001",
+      "slug": "louis-vuitton-neverfull-mm-damier-ebene",
+      "title": "Neverfull MM Damier Ebene",
+      "brand": "Louis Vuitton",
+      "model": "Neverfull MM",
+      "year": 2019,
+      "condition": "Pristine",
+      "price": 1850,
+      "category": "handbags",
+      "status": "auction",
+      "endsAtISO": "2024-12-20T18:00:00Z",
+      "cover": "/assets/img/brands/lv/lv-neverfull-mm-ebene-01.webp",
+      "images": [
+        "/assets/img/brands/lv/lv-neverfull-mm-ebene-01.webp",
+        "/assets/img/brands/lv/lv-neverfull-mm-ebene-02.webp",
+        "/assets/img/brands/lv/lv-neverfull-mm-ebene-03.webp"
+      ],
+      "tags": ["tote", "canvas", "everyday", "classic"],
+      "description": "The iconic Louis Vuitton Neverfull MM in timeless Damier Ebene canvas. This versatile tote features natural cowhide leather trim, textile lining, and the signature LV turn-lock closure. Perfect for everyday elegance.",
+      "measurements": "12.6\" x 11.4\" x 6.7\"",
+      "authenticity": "Verified by SERIAE authentication team",
+      "metrics": {
+        "views": 342,
+        "watchers": 18
+      }
+    },
+    {
+      "id": "ch-classic-flap-002",
+      "slug": "chanel-classic-flap-medium-black",
+      "title": "Classic Flap Medium",
+      "brand": "Chanel",
+      "model": "Classic Flap",
+      "year": 2021,
+      "condition": "Excellent",
+      "price": 4200,
+      "category": "handbags",
+      "status": "auction",
+      "endsAtISO": "2024-12-19T20:00:00Z",
+      "cover": "/assets/img/brands/chanel/chanel-classic-flap-medium-01.webp",
+      "images": [
+        "/assets/img/brands/chanel/chanel-classic-flap-medium-01.webp",
+        "/assets/img/brands/chanel/chanel-classic-flap-medium-02.webp",
+        "/assets/img/brands/chanel/chanel-classic-flap-medium-03.webp"
+      ],
+      "tags": ["quilted", "lambskin", "evening", "iconic"],
+      "description": "Timeless Chanel Classic Flap in medium size with luxurious lambskin leather and signature diamond quilting. Features the iconic CC turn-lock closure and chain-leather strap.",
+      "measurements": "10\" x 6\" x 2.75\"",
+      "authenticity": "Includes authenticity card and original dust bag",
+      "metrics": {
+        "views": 521,
+        "watchers": 34
+      }
+    },
+    {
+      "id": "he-birkin-35-003",
+      "slug": "hermes-birkin-35-togo-black",
+      "title": "Birkin 35 Togo Leather",
+      "brand": "Hermès",
+      "model": "Birkin 35",
+      "year": 2020,
+      "condition": "Museum Quality",
+      "price": 18500,
+      "category": "handbags",
+      "status": "appointment",
+      "cover": "/assets/img/brands/hermes/hermes-birkin-35-togo-01.webp",
+      "images": [
+        "/assets/img/brands/hermes/hermes-birkin-35-togo-01.webp",
+        "/assets/img/brands/hermes/hermes-birkin-35-togo-02.webp",
+        "/assets/img/brands/hermes/hermes-birkin-35-togo-03.webp"
+      ],
+      "tags": ["investment", "togo-leather", "palladium-hardware", "rare"],
+      "description": "The ultimate luxury handbag. This Hermès Birkin 35 in noir Togo leather with palladium hardware represents the pinnacle of craftsmanship. Museum-quality condition with original box and documentation.",
+      "measurements": "13.8\" x 11\" x 7\"",
+      "authenticity": "Blind stamp Y (2020), includes original invoice and receipt",
+      "metrics": {
+        "views": 892,
+        "watchers": 67
+      }
+    },
+    {
+      "id": "rx-gmt-master-004",
+      "slug": "rolex-gmt-master-ii-pepsi-126710blro",
+      "title": "GMT-Master II Pepsi",
+      "brand": "Rolex",
+      "model": "GMT-Master II 126710BLRO",
+      "year": 2022,
+      "condition": "Unworn",
+      "price": 22800,
+      "category": "timepieces",
+      "status": "auction",
+      "endsAtISO": "2024-12-18T16:00:00Z",
+      "cover": "/assets/img/brands/rolex/rolex-gmt-master-ii-pepsi-01.webp",
+      "images": [
+        "/assets/img/brands/rolex/rolex-gmt-master-ii-pepsi-01.webp",
+        "/assets/img/brands/rolex/rolex-gmt-master-ii-pepsi-02.webp",
+        "/assets/img/brands/rolex/rolex-gmt-master-ii-pepsi-03.webp"
+      ],
+      "tags": ["sport", "stainless-steel", "jubilee-bracelet", "unworn"],
+      "description": "Iconic Rolex GMT-Master II 'Pepsi' with blue and red Cerachrom bezel. Unworn condition with full box, papers, and warranty card dated 2022. Reference 126710BLRO on jubilee bracelet.",
+      "measurements": "40mm case diameter",
+      "authenticity": "Full set with warranty card, box, and papers",
+      "metrics": {
+        "views": 1247,
+        "watchers": 89
+      }
+    },
+    {
+      "id": "gu-marmont-005",
+      "slug": "gucci-gg-marmont-small-black-matelasse",
+      "title": "GG Marmont Small Shoulder Bag",
+      "brand": "Gucci",
+      "model": "GG Marmont Small",
+      "year": 2023,
+      "condition": "Excellent",
+      "price": 1680,
+      "category": "handbags",
+      "status": "available",
+      "cover": "/assets/img/brands/gucci/gucci-gg-marmont-small-01.webp",
+      "images": [
+        "/assets/img/brands/gucci/gucci-gg-marmont-small-01.webp",
+        "/assets/img/brands/gucci/gucci-gg-marmont-small-02.webp",
+        "/assets/img/brands/gucci/gucci-gg-marmont-small-03.webp"
+      ],
+      "tags": ["matelasse", "chevron", "chain-strap", "modern"],
+      "description": "Gucci GG Marmont small shoulder bag in black matelassé leather with chevron quilting and iconic double G hardware. Features sliding chain strap for shoulder or crossbody wear.",
+      "measurements": "9.8\" x 6\" x 2.2\"",
+      "authenticity": "Includes original receipt and dust bag",
+      "metrics": {
+        "views": 289,
+        "watchers": 22
+      }
+    },
+    {
+      "id": "pr-reedition-006",
+      "slug": "prada-re-edition-2005-nylon-black",
+      "title": "Re-Edition 2005 Re-Nylon Bag",
+      "brand": "Prada",
+      "model": "Re-Edition 2005",
+      "year": 2023,
+      "condition": "Pristine",
+      "price": 1290,
+      "category": "handbags",
+      "status": "available",
+      "cover": "/assets/img/brands/prada/prada-reedition-2005-01.webp",
+      "images": [
+        "/assets/img/brands/prada/prada-reedition-2005-01.webp",
+        "/assets/img/brands/prada/prada-reedition-2005-02.webp",
+        "/assets/img/brands/prada/prada-reedition-2005-03.webp"
+      ],
+      "tags": ["nylon", "sustainable", "iconic", "crossbody"],
+      "description": "Prada's iconic Re-Edition 2005 shoulder bag in sustainable Re-Nylon. Features the signature triangular logo, detachable shoulder strap, and zip closure. A modern classic combining heritage design with eco-conscious materials.",
+      "measurements": "8.3\" x 5.9\" x 1.8\"",
+      "authenticity": "Includes authenticity card and dust bag",
+      "metrics": {
+        "views": 412,
+        "watchers": 31
+      }
+    },
+    {
+      "id": "lv-speedy-007",
+      "slug": "louis-vuitton-speedy-30-monogram",
+      "title": "Speedy 30 Monogram",
+      "brand": "Louis Vuitton",
+      "model": "Speedy 30",
+      "year": 2021,
+      "condition": "Excellent",
+      "price": 1180,
+      "category": "handbags",
+      "status": "available",
+      "cover": "/assets/img/brands/lv/lv-speedy-30-monogram-01.webp",
+      "images": [
+        "/assets/img/brands/lv/lv-speedy-30-monogram-01.webp",
+        "/assets/img/brands/lv/lv-speedy-30-monogram-02.webp"
+      ],
+      "tags": ["monogram", "canvas", "classic", "everyday"],
+      "description": "The timeless Louis Vuitton Speedy 30 in iconic monogram canvas. This versatile top-handle bag features a roomy interior and signature gold-tone hardware.",
+      "measurements": "11.8\" x 8.3\" x 6.7\"",
+      "authenticity": "Date code CA2121, includes dust bag",
+      "metrics": {
+        "views": 267,
+        "watchers": 19
+      }
+    },
+    {
+      "id": "ch-boy-008",
+      "slug": "chanel-boy-bag-medium-navy",
+      "title": "Boy Bag Medium Navy",
+      "brand": "Chanel",
+      "model": "Boy Bag",
+      "year": 2022,
+      "condition": "Pristine",
+      "price": 5200,
+      "category": "handbags",
+      "status": "auction",
+      "endsAtISO": "2024-12-21T14:00:00Z",
+      "cover": "/assets/img/brands/chanel/chanel-boy-medium-navy-01.webp",
+      "images": [
+        "/assets/img/brands/chanel/chanel-boy-medium-navy-01.webp",
+        "/assets/img/brands/chanel/chanel-boy-medium-navy-02.webp"
+      ],
+      "tags": ["caviar", "limited-edition", "navy", "modern"],
+      "description": "Chanel Boy Bag in stunning navy caviar leather with ruthenium hardware. This modern classic features the signature Boy clasp and structured silhouette.",
+      "measurements": "10\" x 5.9\" x 3.1\"",
+      "authenticity": "Includes authenticity card and original packaging",
+      "metrics": {
+        "views": 634,
+        "watchers": 45
+      }
+    },
+    {
+      "id": "rx-submariner-009",
+      "slug": "rolex-submariner-date-126610ln",
+      "title": "Submariner Date 41mm",
+      "brand": "Rolex",
+      "model": "Submariner Date 126610LN",
+      "year": 2021,
+      "condition": "Excellent",
+      "price": 14800,
+      "category": "timepieces",
+      "status": "available",
+      "cover": "/assets/img/brands/rolex/rolex-submariner-date-01.webp",
+      "images": [
+        "/assets/img/brands/rolex/rolex-submariner-date-01.webp",
+        "/assets/img/brands/rolex/rolex-submariner-date-02.webp"
+      ],
+      "tags": ["dive-watch", "ceramic-bezel", "oyster-bracelet", "classic"],
+      "description": "The legendary Rolex Submariner Date in stainless steel with black Cerachrom bezel. 41mm case with the reliable caliber 3235 movement. Complete set with box and papers.",
+      "measurements": "41mm case diameter",
+      "authenticity": "Full set with warranty card dated 2021",
+      "metrics": {
+        "views": 891,
+        "watchers": 58
+      }
+    },
+    {
+      "id": "he-kelly-010",
+      "slug": "hermes-kelly-28-epsom-gold",
+      "title": "Kelly 28 Epsom Gold",
+      "brand": "Hermès",
+      "model": "Kelly 28",
+      "year": 2019,
+      "condition": "Excellent",
+      "price": 12500,
+      "category": "handbags",
+      "status": "appointment",
+      "cover": "/assets/img/brands/hermes/hermes-kelly-28-gold-01.webp",
+      "images": [
+        "/assets/img/brands/hermes/hermes-kelly-28-gold-01.webp",
+        "/assets/img/brands/hermes/hermes-kelly-28-gold-02.webp"
+      ],
+      "tags": ["kelly", "epsom", "gold-hardware", "structured"],
+      "description": "Hermès Kelly 28 in gold Epsom leather with gold hardware. This iconic structured bag epitomizes elegance and craftsmanship. Includes shoulder strap, lock, keys, and clochette.",
+      "measurements": "11\" x 8.3\" x 3.9\"",
+      "authenticity": "Blind stamp C (2019), includes original documentation",
+      "metrics": {
+        "views": 723,
+        "watchers": 52
+      }
+    }
+  ]
+}

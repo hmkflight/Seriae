@@ -1,0 +1,85 @@
+{
+  "consignments": [
+    {
+      "id": "cons-001",
+      "itemTitle": "Chanel Classic Flap Jumbo",
+      "brand": "Chanel",
+      "category": "handbags",
+      "submittedAt": "2024-12-01T10:00:00Z",
+      "status": "In Review",
+      "estimatedValue": 6500,
+      "notes": "Authentication in progress. Expected listing date: Dec 20, 2024",
+      "lastUpdated": "2024-12-15T14:30:00Z"
+    },
+    {
+      "id": "cons-002",
+      "itemTitle": "Rolex Daytona 116500LN",
+      "brand": "Rolex",
+      "category": "timepieces",
+      "submittedAt": "2024-11-15T09:00:00Z",
+      "status": "Listed",
+      "estimatedValue": 32000,
+      "listedPrice": 34500,
+      "listedAt": "2024-11-20T12:00:00Z",
+      "views": 1247,
+      "watchers": 89,
+      "notes": "Active auction ending Dec 25, 2024",
+      "lastUpdated": "2024-12-17T16:00:00Z"
+    },
+    {
+      "id": "cons-003",
+      "itemTitle": "Louis Vuitton Keepall 55",
+      "brand": "Louis Vuitton",
+      "category": "handbags",
+      "submittedAt": "2024-10-10T15:00:00Z",
+      "status": "Sold",
+      "estimatedValue": 1200,
+      "finalPrice": 1350,
+      "soldAt": "2024-11-08T18:00:00Z",
+      "daysToSell": 29,
+      "commission": 202.50,
+      "payout": 1147.50,
+      "notes": "Successfully sold via private sale",
+      "lastUpdated": "2024-11-10T10:00:00Z"
+    },
+    {
+      "id": "cons-004",
+      "itemTitle": "Hermès Constance 18",
+      "brand": "Hermès",
+      "category": "handbags",
+      "submittedAt": "2024-09-20T11:00:00Z",
+      "status": "Sold",
+      "estimatedValue": 8500,
+      "finalPrice": 9200,
+      "soldAt": "2024-10-05T20:00:00Z",
+      "daysToSell": 15,
+      "commission": 1380,
+      "payout": 7820,
+      "notes": "Sold at exhibition to premium member",
+      "lastUpdated": "2024-10-08T09:00:00Z"
+    },
+    {
+      "id": "cons-005",
+      "itemTitle": "Gucci Dionysus Medium",
+      "brand": "Gucci",
+      "category": "handbags",
+      "submittedAt": "2024-12-10T13:00:00Z",
+      "status": "Returned",
+      "estimatedValue": 1800,
+      "returnReason": "Item did not meet authentication standards",
+      "returnedAt": "2024-12-14T10:00:00Z",
+      "notes": "Additional verification required. Please resubmit with purchase receipt",
+      "lastUpdated": "2024-12-14T11:30:00Z"
+    }
+  ],
+  "stats": {
+    "totalConsignments": 5,
+    "inReview": 1,
+    "listed": 1,
+    "sold": 2,
+    "returned": 1,
+    "totalRevenue": 10550,
+    "averageDaysToSell": 22,
+    "successRate": 0.8
+  }
+}

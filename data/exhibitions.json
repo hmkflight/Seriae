@@ -1,0 +1,48 @@
+{
+  "exhibitions": [
+    {
+      "id": "ex-001",
+      "title": "Hermès Heritage Collection",
+      "venue": "Geneva Private Showroom",
+      "startDate": "2024-12-20",
+      "endDate": "2024-12-22",
+      "status": "upcoming",
+      "description": "Exclusive viewing of rare Hermès pieces including Birkin, Kelly, and limited edition accessories.",
+      "itemsCount": 12,
+      "byAppointmentOnly": true
+    },
+    {
+      "id": "ex-002",
+      "title": "Rolex Sports Collection",
+      "venue": "London Mayfair Gallery",
+      "startDate": "2025-01-10",
+      "endDate": "2025-01-15",
+      "status": "upcoming",
+      "description": "Featuring iconic sports models: Submariner, GMT-Master II, Daytona, and Explorer.",
+      "itemsCount": 18,
+      "byAppointmentOnly": false
+    },
+    {
+      "id": "ex-003",
+      "title": "Chanel Timeless Elegance",
+      "venue": "New York Fifth Avenue",
+      "startDate": "2024-11-05",
+      "endDate": "2024-11-10",
+      "status": "completed",
+      "description": "A retrospective of Chanel's most iconic handbags from 2000-2024.",
+      "itemsCount": 25,
+      "byAppointmentOnly": false
+    },
+    {
+      "id": "ex-004",
+      "title": "Louis Vuitton Monogram Showcase",
+      "venue": "Paris Champs-Élysées",
+      "startDate": "2024-10-15",
+      "endDate": "2024-10-20",
+      "status": "completed",
+      "description": "Celebrating the iconic monogram canvas with vintage and contemporary pieces.",
+      "itemsCount": 20,
+      "byAppointmentOnly": false
+    }
+  ]
+}
