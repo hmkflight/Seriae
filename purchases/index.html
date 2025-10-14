@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase History - SERIAE</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="../assets/js/translations.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content" data-translate="accessibility.skip">Skip to content</a>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html"><h1>SERIAE</h1></a>
+            </div>
+            <div class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="../dashboard.html" class="nav-link" data-translate="nav.dashboard">Dashboard</a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.buyer.menu">Buyer Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../collections/index.html" class="dropdown-item" data-translate="buyer.browse.collections">Browse Collections</a>
+                        <a href="../auctions/index.html" class="dropdown-item" data-translate="buyer.active.auctions">Active Auctions</a>
+                        <a href="../auctions/history.html" class="dropdown-item" data-translate="buyer.bidding.history">Bidding History</a>
+                        <a href="../watchlist/index.html" class="dropdown-item" data-translate="buyer.watchlist">Watchlist</a>
+                        <a href="../purchases/index.html" class="dropdown-item" aria-current="page" data-translate="buyer.purchase.history">Purchase History</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.seller.menu">Seller Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../seller/register.html" class="dropdown-item" data-translate="seller.product.registration">Product Registration</a>
+                        <a href="../seller/products.html" class="dropdown-item" data-translate="seller.product.list">Product List</a>
+                        <a href="../seller/exhibitions.html" class="dropdown-item" data-translate="seller.exhibition.list">Exhibition List</a>
+                        <a href="../seller/analytics.html" class="dropdown-item" data-translate="seller.sales.analytics">Sales Analytics</a>
+                        <a href="../seller/consignment.html" class="dropdown-item" data-translate="seller.consignment.status">Consignment Status</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.user.management">User Management</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../legal/terms.html" class="dropdown-item" data-translate="user.terms.of.use">Terms of Use</a>
+                        <a href="../support/contact.html" class="dropdown-item" data-translate="user.contact.us">Contact Us</a>
+                        <a href="../support/index.html" class="dropdown-item" data-translate="user.support.center">Support Center</a>
+                        <a href="../legal/privacy.html" class="dropdown-item" data-translate="user.privacy.policy">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-dropdown language-toggle">
+                    <a href="#" class="nav-link dropdown-trigger">EN <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" data-lang="en" data-translate="common.english">English</a>
+                        <a href="#" class="dropdown-item" data-lang="ja" data-translate="common.japanese">日本語</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown profile-menu">
+                    <a href="#" class="nav-link dropdown-trigger profile-trigger"><span data-translate="nav.profile">Profile</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu profile-dropdown">
+                        <div class="profile-header">
+                            <div class="profile-avatar">S</div>
+                            <div class="profile-info">
+                                <span class="profile-name" data-translate="profile.member.name">Seriae Member</span>
+                                <span class="profile-status" data-translate="profile.member.status">Premium</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="../account/profile.html" class="dropdown-item" data-translate="profile.my.profile">My Profile</a>
+                        <a href="../account/settings.html" class="dropdown-item" data-translate="profile.account.settings">Account Settings</a>
+                        <a href="../account/addresses.html" class="dropdown-item" data-translate="profile.shipping.address">Shipping Address</a>
+                        <a href="../account/payment.html" class="dropdown-item" data-translate="profile.bank.accounts">Bank Accounts</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout" data-translate="nav.logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1 data-translate="purchases.title">Purchase History</h1>
+                <p data-translate="purchases.subtitle">Your acquired luxury pieces</p>
+            </div>
+        </section>
+
+        <section class="purchases-content">
+            <div class="container">
+                <div id="purchases-list" class="purchases-list">
+                    <!-- Purchase history will be rendered here -->
+                </div>
+                <div id="empty-purchases" class="empty-state" style="display: none;">
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="10" y="20" width="44" height="34" rx="2"/>
+                        <path d="M10 28h44M18 20v-4a8 8 0 0116 0v4"/>
+                        <circle cx="24" cy="38" r="2" fill="currentColor"/>
+                        <circle cx="40" cy="38" r="2" fill="currentColor"/>
+                    </svg>
+                    <h2 data-translate="purchases.empty.title">No Purchase History</h2>
+                    <p data-translate="purchases.empty.subtitle">Your purchased items will appear here</p>
+                    <a href="../collections/index.html" class="btn-primary" data-translate="purchases.browse">Browse Collections</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SERIAE</h3>
+                <p data-translate="footer.tagline">Curating excellence in luxury resale since 1987</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-translate="footer.collections">Collections</h4>
+                <ul>
+                    <li><a href="../collections/index.html" data-translate="footer.handbags.accessories">Handbags & Accessories</a></li>
+                    <li><a href="../collections/index.html" data-translate="footer.fine.timepieces">Fine Timepieces</a></li>
+                    <li><a href="../seller/register.html" data-translate="footer.private.consignment">Private Consignment</a></li>
+                    <li><a href="../support/index.html" data-translate="footer.authentication.services">Authentication Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-translate="footer.experience">Experience</h4>
+                <ul>
+                    <li><a href="../support/index.html" data-translate="footer.private.showroom">Private Showroom</a></li>
+                    <li><a href="../support/contact.html" data-translate="footer.personal.curator">Personal Curator</a></li>
+                    <a href="../account/profile.html" data-translate="footer.member.services">Member Services</a></li>
+                    <li><a href="../support/index.html" data-translate="footer.heritage.stories">Heritage Stories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer.copyright">&copy; 2024 Seriae. All rights reserved. | London | New York | Geneva</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/ui.js"></script>
+    <script src="../assets/js/render.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Purchase history page logic
+        (async function() {
+            const items = await window.DataService.getItems();
+            const auctionData = await window.DataService.getAuctions();
+
+            function renderPurchases() {
+                const list = document.getElementById('purchases-list');
+                const emptyState = document.getElementById('empty-purchases');
+
+                const purchases = auctionData.history || [];
+
+                if (purchases.length === 0) {
+                    list.style.display = 'none';
+                    emptyState.style.display = 'flex';
+                    return;
+                }
+
+                list.style.display = 'block';
+                emptyState.style.display = 'none';
+
+                list.innerHTML = purchases.map(purchase => {
+                    const item = items.find(i => i.id === purchase.itemId);
+                    if (!item) return '';
+
+                    const statusClass = purchase.deliveryStatus.toLowerCase().replace(' ', '-');
+
+                    return `
+                        <div class="purchase-card">
+                            <div class="purchase-header">
+                                <div class="purchase-date">
+                                    <span data-translate="purchases.purchased">Purchased:</span>
+                                    <time>${window.Render.formatDate(purchase.purchasedAt)}</time>
+                                </div>
+                                <span class="purchase-status status-${statusClass}">${purchase.deliveryStatus}</span>
+                            </div>
+                            <div class="purchase-body">
+                                <a href="../item/${item.slug}.html" class="purchase-image-link">
+                                    <img src="${item.cover}" alt="${item.title}" width="120" height="120">
+                                </a>
+                                <div class="purchase-details">
+                                    <a href="../item/${item.slug}.html">
+                                        <h3 class="purchase-brand">${item.brand}</h3>
+                                        <h4 class="purchase-title">${item.title}</h4>
+                                    </a>
+                                    <p class="purchase-meta">${item.year} · ${item.condition}</p>
+                                    <div class="purchase-price">
+                                        <span data-translate="purchases.price">Purchase Price:</span>
+                                        <span class="price-amount">${window.Render.currency(purchase.finalPrice)}</span>
+                                    </div>
+                                </div>
+                                <div class="purchase-actions">
+                                    ${purchase.deliveryStatus === 'Delivered' ? `
+                                        <button class="btn-secondary" onclick="window.location.href='../support/contact.html'">
+                                            <span data-translate="purchases.contact.support">Contact Support</span>
+                                        </button>
+                                    ` : purchase.trackingNumber ? `
+                                        <button class="btn-primary" onclick="alert('Tracking: ${purchase.trackingNumber}')">
+                                            <span data-translate="purchases.track">Track Shipment</span>
+                                        </button>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Initial render
+            renderPurchases();
+        })();
+    </script>
+</body>
+</html>
