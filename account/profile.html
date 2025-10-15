@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - SERIAE</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="../assets/js/translations.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo"><a href="../index.html"><h1>SERIAE</h1></a></div>
+            <div class="nav-links">
+                <div class="nav-dropdown"><a href="../dashboard.html" class="nav-link">Dashboard</a></div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span>Buyer Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../collections/index.html" class="dropdown-item">Browse Collections</a>
+                        <a href="../auctions/index.html" class="dropdown-item">Active Auctions</a>
+                        <a href="../watchlist/index.html" class="dropdown-item">Watchlist</a>
+                        <a href="../purchases/index.html" class="dropdown-item">Purchase History</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span>Seller Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../seller/register.html" class="dropdown-item">Product Registration</a>
+                        <a href="../seller/products.html" class="dropdown-item">Product List</a>
+                        <a href="../seller/exhibitions.html" class="dropdown-item">Exhibition List</a>
+                        <a href="../seller/analytics.html" class="dropdown-item">Sales Analytics</a>
+                        <a href="../seller/consignment.html" class="dropdown-item">Consignment Status</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-dropdown language-toggle">
+                    <a href="#" class="nav-link dropdown-trigger">EN <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" data-lang="en">English</a>
+                        <a href="#" class="dropdown-item" data-lang="ja">日本語</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown profile-menu">
+                    <a href="#" class="nav-link dropdown-trigger profile-trigger"><span>Profile</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu profile-dropdown">
+                        <div class="profile-header">
+                            <div class="profile-avatar">S</div>
+                            <div class="profile-info">
+                                <span class="profile-name">Seriae Member</span>
+                                <span class="profile-status">Premium</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="profile.html" class="dropdown-item" aria-current="page">My Profile</a>
+                        <a href="settings.html" class="dropdown-item">Account Settings</a>
+                        <a href="addresses.html" class="dropdown-item">Shipping Address</a>
+                        <a href="payment.html" class="dropdown-item">Bank Accounts</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>My Profile</h1>
+                <p>Manage your personal information</p>
+            </div>
+        </section>
+
+        <section class="account-content">
+            <div class="container">
+                <div class="account-layout">
+                    <aside class="account-sidebar">
+                        <nav class="account-nav">
+                            <a href="profile.html" class="account-nav-item active">Profile</a>
+                            <a href="settings.html" class="account-nav-item">Settings</a>
+                            <a href="addresses.html" class="account-nav-item">Addresses</a>
+                            <a href="payment.html" class="account-nav-item">Payment Methods</a>
+                        </nav>
+                    </aside>
+
+                    <div class="account-main">
+                        <form id="profile-form" class="account-form">
+                            <div class="form-section">
+                                <h2>Personal Information</h2>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required class="form-control" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required class="form-control" value="" data-validate="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" value="" data-validate="phone">
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h2>Preferences</h2>
+                                <div class="form-group">
+                                    <label>Interested Categories</label>
+                                    <div class="checkbox-group" id="interests"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SERIAE</h3>
+                <p>Curating excellence in luxury resale since 1987</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Seriae. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/ui.js"></script>
+    <script src="../assets/js/forms.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        (async function() {
+            const userData = await window.DataService.getUser();
+            
+            // Populate form
+            document.getElementById('firstName').value = userData.profile.firstName;
+            document.getElementById('lastName').value = userData.profile.lastName;
+            document.getElementById('email').value = userData.profile.email;
+            document.getElementById('phone').value = userData.profile.phone;
+            
+            // Render interests
+            const interestsContainer = document.getElementById('interests');
+            ['handbags', 'timepieces', 'jewelry', 'accessories'].forEach(cat => {
+                const checked = userData.interests.includes(cat);
+                interestsContainer.innerHTML += `
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="interests" value="${cat}" ${checked ? 'checked' : ''}>
+                        <span>${cat.charAt(0).toUpperCase() + cat.slice(1)}</span>
+                    </label>
+                `;
+            });
+            
+            // Setup form
+            window.Forms.setup('#profile-form', {
+                successMessage: 'Profile updated successfully!',
+                onSuccess: (data) => {
+                    // Update user data in localStorage
+                    const interests = Array.from(document.querySelectorAll('input[name="interests"]:checked')).map(cb => cb.value);
+                    userData.profile = { ...userData.profile, ...data };
+                    userData.interests = interests;
+                    localStorage.setItem('SERIAE_USER', JSON.stringify(userData));
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
