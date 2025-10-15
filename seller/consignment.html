@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consignment Status - SERIAE</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="../assets/js/translations.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content" data-translate="accessibility.skip">Skip to content</a>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html"><h1>SERIAE</h1></a>
+            </div>
+            <div class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="../dashboard.html" class="nav-link" data-translate="nav.dashboard">Dashboard</a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.buyer.menu">Buyer Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../collections/index.html" class="dropdown-item" data-translate="buyer.browse.collections">Browse Collections</a>
+                        <a href="../auctions/index.html" class="dropdown-item" data-translate="buyer.active.auctions">Active Auctions</a>
+                        <a href="../auctions/history.html" class="dropdown-item" data-translate="buyer.bidding.history">Bidding History</a>
+                        <a href="../watchlist/index.html" class="dropdown-item" data-translate="buyer.watchlist">Watchlist</a>
+                        <a href="../purchases/index.html" class="dropdown-item" data-translate="buyer.purchase.history">Purchase History</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.seller.menu">Seller Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../seller/register.html" class="dropdown-item" data-translate="seller.product.registration">Product Registration</a>
+                        <a href="../seller/products.html" class="dropdown-item" data-translate="seller.product.list">Product List</a>
+                        <a href="../seller/exhibitions.html" class="dropdown-item" data-translate="seller.exhibition.list">Exhibition List</a>
+                        <a href="../seller/analytics.html" class="dropdown-item" data-translate="seller.sales.analytics">Sales Analytics</a>
+                        <a href="../seller/consignment.html" class="dropdown-item" aria-current="page" data-translate="seller.consignment.status">Consignment Status</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.user.management">User Management</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../legal/terms.html" class="dropdown-item" data-translate="user.terms.of.use">Terms of Use</a>
+                        <a href="../support/contact.html" class="dropdown-item" data-translate="user.contact.us">Contact Us</a>
+                        <a href="../support/index.html" class="dropdown-item" data-translate="user.support.center">Support Center</a>
+                        <a href="../legal/privacy.html" class="dropdown-item" data-translate="user.privacy.policy">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-dropdown language-toggle">
+                    <a href="#" class="nav-link dropdown-trigger">EN <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" data-lang="en" data-translate="common.english">English</a>
+                        <a href="#" class="dropdown-item" data-lang="ja" data-translate="common.japanese">日本語</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown profile-menu">
+                    <a href="#" class="nav-link dropdown-trigger profile-trigger"><span data-translate="nav.profile">Profile</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu profile-dropdown">
+                        <div class="profile-header">
+                            <div class="profile-avatar">S</div>
+                            <div class="profile-info">
+                                <span class="profile-name" data-translate="profile.member.name">Seriae Member</span>
+                                <span class="profile-status" data-translate="profile.member.status">Premium</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="../account/profile.html" class="dropdown-item" data-translate="profile.my.profile">My Profile</a>
+                        <a href="../account/settings.html" class="dropdown-item" data-translate="profile.account.settings">Account Settings</a>
+                        <a href="../account/addresses.html" class="dropdown-item" data-translate="profile.shipping.address">Shipping Address</a>
+                        <a href="../account/payment.html" class="dropdown-item" data-translate="profile.bank.accounts">Bank Accounts</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout" data-translate="nav.logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1 data-translate="seller.consignment.title">Consignment Status</h1>
+                <p data-translate="seller.consignment.subtitle">Track your items through the consignment process</p>
+            </div>
+        </section>
+
+        <section class="consignment-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number" id="in-review">0</span>
+                        <span class="stat-label" data-translate="seller.consignment.stat.review">In Review</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="listed">0</span>
+                        <span class="stat-label" data-translate="seller.consignment.stat.listed">Listed</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="sold">0</span>
+                        <span class="stat-label" data-translate="seller.consignment.stat.sold">Sold</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="pending-payout">$0</span>
+                        <span class="stat-label" data-translate="seller.consignment.stat.pending">Pending Payout</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="consignment-content">
+            <div class="container">
+                <div id="consignment-list" class="consignment-list">
+                    <!-- Consignments will be rendered here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SERIAE</h3>
+                <p data-translate="footer.tagline">Curating excellence in luxury resale since 1987</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-translate="footer.collections">Collections</h4>
+                <ul>
+                    <li><a href="../collections/index.html" data-translate="footer.handbags.accessories">Handbags & Accessories</a></li>
+                    <li><a href="../collections/index.html" data-translate="footer.fine.timepieces">Fine Timepieces</a></li>
+                    <li><a href="../seller/register.html" data-translate="footer.private.consignment">Private Consignment</a></li>
+                    <li><a href="../support/index.html" data-translate="footer.authentication.services">Authentication Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-translate="footer.experience">Experience</h4>
+                <ul>
+                    <li><a href="../support/index.html" data-translate="footer.private.showroom">Private Showroom</a></li>
+                    <li><a href="../support/contact.html" data-translate="footer.personal.curator">Personal Curator</a></li>
+                    <li><a href="../account/profile.html" data-translate="footer.member.services">Member Services</a></li>
+                    <li><a href="../support/index.html" data-translate="footer.heritage.stories">Heritage Stories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer.copyright">&copy; 2024 Seriae. All rights reserved. | London | New York | Geneva</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/ui.js"></script>
+    <script src="../assets/js/render.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Consignment status page logic
+        (async function() {
+            const consignmentsData = await window.DataService.getConsignments();
+
+            function calculateStats() {
+                const inReview = consignmentsData.consignments.filter(c => c.status === 'In Review').length;
+                const listed = consignmentsData.consignments.filter(c => c.status === 'Listed').length;
+                const sold = consignmentsData.consignments.filter(c => c.status === 'Sold').length;
+                const pendingPayout = consignmentsData.consignments
+                    .filter(c => c.status === 'Sold' && !c.payoutDate)
+                    .reduce((sum, c) => sum + (c.soldPrice || c.price), 0);
+
+                document.getElementById('in-review').textContent = inReview;
+                document.getElementById('listed').textContent = listed;
+                document.getElementById('sold').textContent = sold;
+                document.getElementById('pending-payout').textContent = window.Render.currency(pendingPayout);
+            }
+
+            function renderConsignments() {
+                const list = document.getElementById('consignment-list');
+
+                list.innerHTML = consignmentsData.consignments.map(consignment => {
+                    const statusClass = consignment.status.toLowerCase().replace(' ', '-');
+                    const commission = consignment.commission || 0.15; // 15% default
+                    const sellerPayout = consignment.soldPrice ? (consignment.soldPrice * (1 - commission)) : 0;
+
+                    return `
+                        <div class="consignment-card">
+                            <div class="consignment-header">
+                                <div class="consignment-item-info">
+                                    <h3>${consignment.brand} ${consignment.model}</h3>
+                                    <p class="consignment-category">${consignment.category}</p>
+                                </div>
+                                <span class="status-badge status-${statusClass}">${consignment.status}</span>
+                            </div>
+
+                            <div class="consignment-timeline">
+                                <div class="timeline-step ${consignment.submittedAt ? 'completed' : ''}">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <strong>Submitted</strong>
+                                        ${consignment.submittedAt ? `<time>${window.Render.formatDate(consignment.submittedAt)}</time>` : ''}
+                                    </div>
+                                </div>
+                                <div class="timeline-step ${consignment.status !== 'In Review' && consignment.status !== 'Pending Review' ? 'completed' : consignment.status === 'In Review' ? 'active' : ''}">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <strong>Authentication</strong>
+                                        ${consignment.status === 'In Review' ? '<span class="timeline-note">In progress</span>' : ''}
+                                    </div>
+                                </div>
+                                <div class="timeline-step ${consignment.listedAt ? 'completed' : consignment.status === 'Listed' ? 'active' : ''}">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <strong>Listed</strong>
+                                        ${consignment.listedAt ? `<time>${window.Render.formatDate(consignment.listedAt)}</time>` : ''}
+                                    </div>
+                                </div>
+                                <div class="timeline-step ${consignment.soldAt ? 'completed' : consignment.status === 'Sold' ? 'active' : ''}">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <strong>Sold</strong>
+                                        ${consignment.soldAt ? `<time>${window.Render.formatDate(consignment.soldAt)}</time>` : ''}
+                                    </div>
+                                </div>
+                                ${consignment.status === 'Returned' ? `
+                                    <div class="timeline-step completed">
+                                        <div class="timeline-marker"></div>
+                                        <div class="timeline-content">
+                                            <strong>Returned</strong>
+                                            ${consignment.returnedAt ? `<time>${window.Render.formatDate(consignment.returnedAt)}</time>` : ''}
+                                        </div>
+                                    </div>
+                                ` : `
+                                    <div class="timeline-step ${consignment.payoutDate ? 'completed' : ''}">
+                                        <div class="timeline-marker"></div>
+                                        <div class="timeline-content">
+                                            <strong>Payout</strong>
+                                            ${consignment.payoutDate ? `<time>${window.Render.formatDate(consignment.payoutDate)}</time>` : consignment.soldAt ? '<span class="timeline-note">Processing</span>' : ''}
+                                        </div>
+                                    </div>
+                                `}
+                            </div>
+
+                            <div class="consignment-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Listed Price:</span>
+                                    <span class="detail-value">${window.Render.currency(consignment.price)}</span>
+                                </div>
+                                ${consignment.soldPrice ? `
+                                    <div class="detail-row">
+                                        <span class="detail-label">Sold Price:</span>
+                                        <span class="detail-value">${window.Render.currency(consignment.soldPrice)}</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Commission (${(commission * 100)}%):</span>
+                                        <span class="detail-value">-${window.Render.currency(consignment.soldPrice * commission)}</span>
+                                    </div>
+                                    <div class="detail-row highlighted">
+                                        <span class="detail-label">Your Payout:</span>
+                                        <span class="detail-value">${window.Render.currency(sellerPayout)}</span>
+                                    </div>
+                                ` : consignment.status === 'Listed' ? `
+                                    <div class="detail-row">
+                                        <span class="detail-label">Performance:</span>
+                                        <span class="detail-value">${consignment.views || 0} views · ${consignment.watchers || 0} watchers</span>
+                                    </div>
+                                ` : ''}
+                            </div>
+
+                            ${consignment.notes ? `
+                                <div class="consignment-notes">
+                                    <p><strong>Notes:</strong> ${consignment.notes}</p>
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Initial render
+            calculateStats();
+            renderConsignments();
+        })();
+    </script>
+</body>
+</html>

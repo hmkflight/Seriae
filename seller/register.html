@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Registration - SERIAE</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="../assets/js/translations.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content" data-translate="accessibility.skip">Skip to content</a>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html"><h1>SERIAE</h1></a>
+            </div>
+            <div class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="../dashboard.html" class="nav-link" data-translate="nav.dashboard">Dashboard</a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.buyer.menu">Buyer Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../collections/index.html" class="dropdown-item" data-translate="buyer.browse.collections">Browse Collections</a>
+                        <a href="../auctions/index.html" class="dropdown-item" data-translate="buyer.active.auctions">Active Auctions</a>
+                        <a href="../auctions/history.html" class="dropdown-item" data-translate="buyer.bidding.history">Bidding History</a>
+                        <a href="../watchlist/index.html" class="dropdown-item" data-translate="buyer.watchlist">Watchlist</a>
+                        <a href="../purchases/index.html" class="dropdown-item" data-translate="buyer.purchase.history">Purchase History</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.seller.menu">Seller Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../seller/register.html" class="dropdown-item" aria-current="page" data-translate="seller.product.registration">Product Registration</a>
+                        <a href="../seller/products.html" class="dropdown-item" data-translate="seller.product.list">Product List</a>
+                        <a href="../seller/exhibitions.html" class="dropdown-item" data-translate="seller.exhibition.list">Exhibition List</a>
+                        <a href="../seller/analytics.html" class="dropdown-item" data-translate="seller.sales.analytics">Sales Analytics</a>
+                        <a href="../seller/consignment.html" class="dropdown-item" data-translate="seller.consignment.status">Consignment Status</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.user.management">User Management</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../legal/terms.html" class="dropdown-item" data-translate="user.terms.of.use">Terms of Use</a>
+                        <a href="../support/contact.html" class="dropdown-item" data-translate="user.contact.us">Contact Us</a>
+                        <a href="../support/index.html" class="dropdown-item" data-translate="user.support.center">Support Center</a>
+                        <a href="../legal/privacy.html" class="dropdown-item" data-translate="user.privacy.policy">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-dropdown language-toggle">
+                    <a href="#" class="nav-link dropdown-trigger">EN <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" data-lang="en" data-translate="common.english">English</a>
+                        <a href="#" class="dropdown-item" data-lang="ja" data-translate="common.japanese">日本語</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown profile-menu">
+                    <a href="#" class="nav-link dropdown-trigger profile-trigger"><span data-translate="nav.profile">Profile</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu profile-dropdown">
+                        <div class="profile-header">
+                            <div class="profile-avatar">S</div>
+                            <div class="profile-info">
+                                <span class="profile-name" data-translate="profile.member.name">Seriae Member</span>
+                                <span class="profile-status" data-translate="profile.member.status">Premium</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="../account/profile.html" class="dropdown-item" data-translate="profile.my.profile">My Profile</a>
+                        <a href="../account/settings.html" class="dropdown-item" data-translate="profile.account.settings">Account Settings</a>
+                        <a href="../account/addresses.html" class="dropdown-item" data-translate="profile.shipping.address">Shipping Address</a>
+                        <a href="../account/payment.html" class="dropdown-item" data-translate="profile.bank.accounts">Bank Accounts</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout" data-translate="nav.logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1 data-translate="seller.register.title">Product Registration</h1>
+                <p data-translate="seller.register.subtitle">Submit your luxury item for consignment</p>
+            </div>
+        </section>
+
+        <section class="registration-content">
+            <div class="container">
+                <div class="registration-layout">
+                    <aside class="registration-sidebar">
+                        <div class="info-card">
+                            <h3 data-translate="seller.register.info.title">Consignment Process</h3>
+                            <ol class="process-steps">
+                                <li>
+                                    <strong data-translate="seller.register.step1.title">Submit Details</strong>
+                                    <p data-translate="seller.register.step1.desc">Complete the registration form with your item information</p>
+                                </li>
+                                <li>
+                                    <strong data-translate="seller.register.step2.title">Authentication</strong>
+                                    <p data-translate="seller.register.step2.desc">Our experts verify authenticity and condition</p>
+                                </li>
+                                <li>
+                                    <strong data-translate="seller.register.step3.title">Listing</strong>
+                                    <p data-translate="seller.register.step3.desc">Item goes live in our curated marketplace</p>
+                                </li>
+                                <li>
+                                    <strong data-translate="seller.register.step4.title">Sale & Payment</strong>
+                                    <p data-translate="seller.register.step4.desc">Receive payment within 5 business days after sale</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="info-card">
+                            <h3 data-translate="seller.register.fees.title">Commission Rates</h3>
+                            <ul class="fees-list">
+                                <li><span data-translate="seller.register.fees.standard">Standard Items:</span> <strong>15%</strong></li>
+                                <li><span data-translate="seller.register.fees.premium">Premium Items ($10k+):</span> <strong>12%</strong></li>
+                                <li><span data-translate="seller.register.fees.rare">Rare Pieces ($50k+):</span> <strong>10%</strong></li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <div class="registration-form-container">
+                        <form id="registration-form" class="registration-form">
+                            <fieldset>
+                                <legend data-translate="seller.register.section.item">Item Information</legend>
+
+                                <div class="form-group">
+                                    <label for="brand" data-translate="seller.register.field.brand">Brand *</label>
+                                    <select id="brand" name="brand" required class="form-control">
+                                        <option value="">Select brand</option>
+                                        <option value="Louis Vuitton">Louis Vuitton</option>
+                                        <option value="Chanel">Chanel</option>
+                                        <option value="Hermès">Hermès</option>
+                                        <option value="Rolex">Rolex</option>
+                                        <option value="Gucci">Gucci</option>
+                                        <option value="Prada">Prada</option>
+                                        <option value="Cartier">Cartier</option>
+                                        <option value="Dior">Dior</option>
+                                        <option value="Bottega Veneta">Bottega Veneta</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="model" data-translate="seller.register.field.model">Model/Style Name *</label>
+                                    <input type="text" id="model" name="model" required class="form-control" placeholder="e.g., Neverfull MM, Classic Flap">
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="category" data-translate="seller.register.field.category">Category *</label>
+                                        <select id="category" name="category" required class="form-control">
+                                            <option value="">Select category</option>
+                                            <option value="handbags">Handbags</option>
+                                            <option value="timepieces">Timepieces</option>
+                                            <option value="jewelry">Jewelry</option>
+                                            <option value="accessories">Accessories</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="year" data-translate="seller.register.field.year">Year of Purchase</label>
+                                        <input type="number" id="year" name="year" min="1950" max="2024" class="form-control" placeholder="2020">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="condition" data-translate="seller.register.field.condition">Condition *</label>
+                                    <select id="condition" name="condition" required class="form-control">
+                                        <option value="">Select condition</option>
+                                        <option value="Pristine">Pristine - Like new, unused</option>
+                                        <option value="Excellent">Excellent - Minimal signs of wear</option>
+                                        <option value="Very Good">Very Good - Light wear, well maintained</option>
+                                        <option value="Good">Good - Noticeable wear, fully functional</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="description" data-translate="seller.register.field.description">Description *</label>
+                                    <textarea id="description" name="description" required class="form-control" rows="4" placeholder="Describe your item's features, materials, hardware, etc."></textarea>
+                                    <p class="form-hint" data-translate="seller.register.hint.description">Include details about materials, hardware, size, and any unique features</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="price" data-translate="seller.register.field.price">Desired Price (USD) *</label>
+                                    <input type="number" id="price" name="price" required min="100" step="50" class="form-control" placeholder="5000">
+                                    <p class="form-hint" data-translate="seller.register.hint.price">Our team will review and may suggest adjustments based on market value</p>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend data-translate="seller.register.section.authenticity">Authenticity & Documentation</legend>
+
+                                <div class="form-group">
+                                    <label data-translate="seller.register.field.documents">Available Documents</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="documents" value="receipt">
+                                            <span data-translate="seller.register.doc.receipt">Original Receipt</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="documents" value="certificate">
+                                            <span data-translate="seller.register.doc.certificate">Certificate of Authenticity</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="documents" value="box">
+                                            <span data-translate="seller.register.doc.box">Original Box/Packaging</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="documents" value="dustbag">
+                                            <span data-translate="seller.register.doc.dustbag">Dust Bag</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="documents" value="warranty">
+                                            <span data-translate="seller.register.doc.warranty">Warranty Card</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="serial" data-translate="seller.register.field.serial">Serial Number / Date Code</label>
+                                    <input type="text" id="serial" name="serial" class="form-control" placeholder="e.g., CA2121">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="purchase-location" data-translate="seller.register.field.purchase">Where was it purchased?</label>
+                                    <input type="text" id="purchase-location" name="purchaseLocation" class="form-control" placeholder="e.g., Louis Vuitton NYC, Chanel.com">
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend data-translate="seller.register.section.contact">Contact Information</legend>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contact-name" data-translate="seller.register.field.name">Full Name *</label>
+                                        <input type="text" id="contact-name" name="contactName" required class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-email" data-translate="seller.register.field.email">Email *</label>
+                                        <input type="email" id="contact-email" name="contactEmail" required class="form-control" data-validate="email">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contact-phone" data-translate="seller.register.field.phone">Phone Number *</label>
+                                        <input type="tel" id="contact-phone" name="contactPhone" required class="form-control" data-validate="phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-method" data-translate="seller.register.field.contact">Preferred Contact Method *</label>
+                                        <select id="contact-method" name="contactMethod" required class="form-control">
+                                            <option value="email">Email</option>
+                                            <option value="phone">Phone</option>
+                                            <option value="both">Both</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend data-translate="seller.register.section.terms">Terms & Conditions</legend>
+
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="termsOwnership" required>
+                                        <span data-translate="seller.register.terms.ownership">I confirm I am the rightful owner of this item</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="termsAuthentic" required>
+                                        <span data-translate="seller.register.terms.authentic">I confirm this item is authentic to the best of my knowledge</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="termsAgreement" required>
+                                        <span data-translate="seller.register.terms.agreement">I agree to SERIAE's consignment terms and commission structure</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn-secondary" onclick="window.history.back()" data-translate="common.cancel">Cancel</button>
+                                <button type="submit" class="btn-primary" data-translate="seller.register.submit">Submit for Review</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SERIAE</h3>
+                <p data-translate="footer.tagline">Curating excellence in luxury resale since 1987</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-translate="footer.collections">Collections</h4>
+                <ul>
+                    <li><a href="../collections/index.html" data-translate="footer.handbags.accessories">Handbags & Accessories</a></li>
+                    <li><a href="../collections/index.html" data-translate="footer.fine.timepieces">Fine Timepieces</a></li>
+                    <li><a href="../seller/register.html" data-translate="footer.private.consignment">Private Consignment</a></li>
+                    <li><a href="../support/index.html" data-translate="footer.authentication.services">Authentication Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-translate="footer.experience">Experience</h4>
+                <ul>
+                    <li><a href="../support/index.html" data-translate="footer.private.showroom">Private Showroom</a></li>
+                    <li><a href="../support/contact.html" data-translate="footer.personal.curator">Personal Curator</a></li>
+                    <li><a href="../account/profile.html" data-translate="footer.member.services">Member Services</a></li>
+                    <li><a href="../support/index.html" data-translate="footer.heritage.stories">Heritage Stories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer.copyright">&copy; 2024 Seriae. All rights reserved. | London | New York | Geneva</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/ui.js"></script>
+    <script src="../assets/js/forms.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Product registration form logic
+        window.Forms.setup('#registration-form', {
+            storageKey: 'SERIAE_SUBMISSIONS',
+            successMessage: 'Product submitted successfully! Our team will review and contact you within 2-3 business days.',
+            onSuccess: (data) => {
+                console.log('Submission data:', data);
+                // Redirect to products page after 2 seconds
+                setTimeout(() => {
+                    window.location.href = 'products.html';
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
