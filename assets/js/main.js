@@ -485,7 +485,38 @@ document.addEventListener('DOMContentLoaded', function() {
     function initializeDashboardCards() {
         const cards = document.querySelectorAll('.dashboard-card');
 
+        // Check if we're on Profile or Account pages - reduce motion intensity
+        const isProfileOrAccount = window.location.pathname.includes('/account/') ||
+                                    window.location.pathname.includes('profile.html');
+
+        // Reduced motion settings for Profile/Account pages
+        const ROT_MAX = isProfileOrAccount ? 2 : 30;  // ±2 degrees for profile, 30 for others
+        const TX_MAX = isProfileOrAccount ? 8 : 5;     // ±8px for profile, 5px for others
+        const damping = isProfileOrAccount ? 0.1 : 1;  // Smooth damping for profile
+
         cards.forEach(card => {
+            let targetRotateX = 0;
+            let targetRotateY = 0;
+            let currentRotateX = 0;
+            let currentRotateY = 0;
+            let animationFrame;
+
+            // Smooth animation loop for profile pages
+            function animate() {
+                if (isProfileOrAccount) {
+                    currentRotateX += (targetRotateX - currentRotateX) * damping;
+                    currentRotateY += (targetRotateY - currentRotateY) * damping;
+
+                    card.style.transform = `perspective(1000px) rotateX(${currentRotateX}deg) rotateY(${currentRotateY}deg) translateY(-${TX_MAX}px)`;
+
+                    if (Math.abs(targetRotateX - currentRotateX) > 0.01 || Math.abs(targetRotateY - currentRotateY) > 0.01) {
+                        animationFrame = requestAnimationFrame(animate);
+                    }
+                } else {
+                    card.style.transform = `perspective(1000px) rotateX(${currentRotateX}deg) rotateY(${currentRotateY}deg) translateY(-${TX_MAX}px)`;
+                }
+            }
+
             // Add sophisticated hover parallax effect
             card.addEventListener('mousemove', function(e) {
                 const rect = card.getBoundingClientRect();
@@ -495,14 +526,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
 
-                const rotateX = (y - centerY) / 30;
-                const rotateY = (centerX - x) / 30;
+                if (isProfileOrAccount) {
+                    // Subtle motion for profile/account pages
+                    targetRotateX = ((y - centerY) / rect.height) * ROT_MAX;
+                    targetRotateY = ((centerX - x) / rect.width) * ROT_MAX;
 
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+                    if (!animationFrame) {
+                        animationFrame = requestAnimationFrame(animate);
+                    }
+                } else {
+                    // Regular motion for other pages
+                    currentRotateX = (y - centerY) / ROT_MAX;
+                    currentRotateY = (centerX - x) / ROT_MAX;
+                    card.style.transform = `perspective(1000px) rotateX(${currentRotateX}deg) rotateY(${currentRotateY}deg) translateY(-${TX_MAX}px)`;
+                }
             });
 
             card.addEventListener('mouseleave', function() {
-                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+                if (isProfileOrAccount) {
+                    targetRotateX = 0;
+                    targetRotateY = 0;
+                    if (!animationFrame) {
+                        animationFrame = requestAnimationFrame(animate);
+                    }
+                    setTimeout(() => {
+                        if (animationFrame) {
+                            cancelAnimationFrame(animationFrame);
+                            animationFrame = null;
+                        }
+                    }, 500);
+                } else {
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+                }
             });
         });
     }

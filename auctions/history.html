@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bidding History - SERIAE</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&amp;family=Inter:wght@200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <script src="../assets/js/translations.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content" data-translate="accessibility.skip">Skip to content</a>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html"><h1>SERIAE</h1></a>
+            </div>
+            <div class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="../dashboard.html" class="nav-link" data-translate="nav.dashboard">Dashboard</a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.buyer.menu">Buyer Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../collections/index.html" class="dropdown-item" data-translate="buyer.browse.collections">Browse Collections</a>
+                        <a href="../auctions/index.html" class="dropdown-item" aria-current="page" data-translate="buyer.active.auctions">Active Auctions</a>
+                        <a href="../auctions/history.html" class="dropdown-item" data-translate="buyer.bidding.history">Bidding History</a>
+                        <a href="../watchlist/index.html" class="dropdown-item" data-translate="buyer.watchlist">Watchlist</a>
+                        <a href="../purchases/index.html" class="dropdown-item" data-translate="buyer.purchase.history">Purchase History</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.seller.menu">Seller Menu</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../seller/register.html" class="dropdown-item" data-translate="seller.product.registration">Product Registration</a>
+                        <a href="../seller/products.html" class="dropdown-item" data-translate="seller.product.list">Product List</a>
+                        <a href="../seller/exhibitions.html" class="dropdown-item" data-translate="seller.exhibition.list">Exhibition List</a>
+                        <a href="../seller/analytics.html" class="dropdown-item" data-translate="seller.sales.analytics">Sales Analytics</a>
+                        <a href="../seller/consignment.html" class="dropdown-item" data-translate="seller.consignment.status">Consignment Status</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span data-translate="nav.user.management">User Management</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../legal/terms.html" class="dropdown-item" data-translate="user.terms.of.use">Terms of Use</a>
+                        <a href="../support/contact.html" class="dropdown-item" data-translate="user.contact.us">Contact Us</a>
+                        <a href="../support/index.html" class="dropdown-item" data-translate="user.support.center">Support Center</a>
+                        <a href="../legal/privacy.html" class="dropdown-item" data-translate="user.privacy.policy">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-dropdown language-toggle">
+                    <a href="#" class="nav-link dropdown-trigger">EN <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" data-lang="en" data-translate="common.english">English</a>
+                        <a href="#" class="dropdown-item" data-lang="ja" data-translate="common.japanese">日本語</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown profile-menu">
+                    <a href="#" class="nav-link dropdown-trigger profile-trigger"><span data-translate="nav.profile">Profile</span> <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu profile-dropdown">
+                        <div class="profile-header">
+                            <div class="profile-avatar">S</div>
+                            <div class="profile-info">
+                                <span class="profile-name" data-translate="profile.member.name">Seriae Member</span>
+                                <span class="profile-status" data-translate="profile.member.status">Premium</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="../account/profile.html" class="dropdown-item" data-translate="profile.my.profile">My Profile</a>
+                        <a href="../account/settings.html" class="dropdown-item" data-translate="profile.account.settings">Account Settings</a>
+                        <a href="../account/addresses.html" class="dropdown-item" data-translate="profile.shipping.address">Shipping Address</a>
+                        <a href="../account/payment.html" class="dropdown-item" data-translate="profile.bank.accounts">Bank Accounts</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout" data-translate="nav.logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1 data-translate="buyer.bidding.history">Bidding History</h1>
+                <p data-translate="auctions.history.subtitle">Review your past and current bids</p>
+            </div>
+        </section>
+
+        <section class="auctions-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number" id="total-auctions">0</span>
+                        <span class="stat-label" data-translate="auctions.stat.active">Active Auctions</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="your-bids">0</span>
+                        <span class="stat-label" data-translate="auctions.stat.yourbids">Your Active Bids</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="ending-soon">0</span>
+                        <span class="stat-label" data-translate="auctions.stat.endingsoon">Ending Within 24h</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="auctions-list">
+            <div class="container">
+                <div id="auctions-grid" class="auctions-grid">
+                    <!-- Auctions will be rendered here -->
+                </div>
+                <div id="no-auctions" class="no-results" style="display: none;">
+                    <p data-translate="auctions.history.empty">No bidding history yet</p>
+                    <a href="../auctions/index.html" class="btn-primary" data-translate="buyer.active.auctions">View Active Auctions</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bid Modal -->
+    <div id="bid-modal" class="modal" role="dialog" aria-labelledby="bid-modal-title" aria-hidden="true" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="bid-modal-title" data-translate="auctions.modal.title">Place Your Bid</h2>
+                <button class="modal-close" aria-label="Close modal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="bid-item-info">
+                    <img id="bid-item-image" src="" alt="" class="bid-item-thumb" loading="lazy" decoding="async">
+                    <div>
+                        <h3 id="bid-item-title"></h3>
+                        <p id="bid-item-brand" class="bid-item-brand"></p>
+                    </div>
+                </div>
+                <form id="bid-form">
+                    <input type="hidden" id="bid-item-id" name="itemId">
+                    <div class="form-group">
+                        <label for="bid-amount" data-translate="auctions.form.amount">Bid Amount (USD)</label>
+                        <input type="number" id="bid-amount" name="amount" min="0" step="50" required="" data-validate="number,min-amount" class="form-control">
+                        <p class="form-hint"><span data-translate="auctions.form.current">Current bid:</span> <span id="current-bid-amount"></span></p>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" required="">
+                            <span data-translate="auctions.form.terms">I agree to the auction terms and conditions</span>
+                        </label>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn-secondary modal-cancel" data-translate="common.cancel">Cancel</button>
+                        <button type="submit" class="btn-primary" data-translate="auctions.form.submit">Place Bid</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SERIAE</h3>
+                <p data-translate="footer.tagline">Curating excellence in luxury resale since 1987</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-translate="footer.collections">Collections</h4>
+                <ul>
+                    <li><a href="../collections/index.html" data-translate="footer.handbags.accessories">Handbags &amp; Accessories</a></li>
+                    <li><a href="../collections/index.html" data-translate="footer.fine.timepieces">Fine Timepieces</a></li>
+                    <li><a href="../seller/register.html" data-translate="footer.private.consignment">Private Consignment</a></li>
+                    <li><a href="../support/index.html" data-translate="footer.authentication.services">Authentication Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-translate="footer.experience">Experience</h4>
+                <ul>
+                    <li><a href="../support/index.html" data-translate="footer.private.showroom">Private Showroom</a></li>
+                    <li><a href="../support/contact.html" data-translate="footer.personal.curator">Personal Curator</a></li>
+                    <li><a href="../account/profile.html" data-translate="footer.member.services">Member Services</a></li>
+                    <li><a href="../support/index.html" data-translate="footer.heritage.stories">Heritage Stories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer.copyright">© 2024 Seriae. All rights reserved. | London | New York | Geneva</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/ui.js"></script>
+    <script src="../assets/js/render.js"></script>
+    <script src="../assets/js/forms.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Auctions page logic
+        (async function() {
+            const items = await window.DataService.getItems();
+            const auctionData = await window.DataService.getAuctions();
+            const myBids = window.DataService.getMyBids();
+
+            // Filter auction items only
+            const auctionItems = items.filter(item => item.status === 'auction');
+
+            function getHighestBid(itemId) {
+                const itemBids = auctionData.bids.filter(bid => bid.itemId === itemId);
+                if (itemBids.length === 0) return null;
+                return Math.max(...itemBids.map(bid => bid.amount));
+            }
+
+            function getMyHighestBid(itemId) {
+                const itemMyBids = myBids.filter(bid => bid.itemId === itemId);
+                if (itemMyBids.length === 0) return null;
+                return Math.max(...itemMyBids.map(bid => bid.amount));
+            }
+
+            function isEndingSoon(endsAtISO) {
+                const now = new Date();
+                const endsAt = new Date(endsAtISO);
+                const hoursRemaining = (endsAt - now) / (1000 * 60 * 60);
+                return hoursRemaining <= 24 && hoursRemaining > 0;
+            }
+
+            function renderAuctions() {
+                const grid = document.getElementById('auctions-grid');
+                const noAuctions = document.getElementById('no-auctions');
+
+                if (auctionItems.length === 0) {
+                    grid.style.display = 'none';
+                    noAuctions.style.display = 'block';
+                    return;
+                }
+
+                grid.style.display = 'grid';
+                noAuctions.style.display = 'none';
+
+                grid.innerHTML = auctionItems.map(item => {
+                    const highestBid = getHighestBid(item.id);
+                    const myHighestBid = getMyHighestBid(item.id);
+                    const currentPrice = highestBid || item.price;
+                    const isLeading = myHighestBid && myHighestBid === highestBid;
+                    const endingSoon = isEndingSoon(item.endsAtISO);
+
+                    return `
+                        <div class="auction-card ${isLeading ? 'leading' : ''} ${endingSoon ? 'ending-soon' : ''}">
+                            <a href="../item/${item.slug}.html" class="auction-image-link">
+                                <img src="${item.cover}" alt="${item.title}" width="300" height="300" loading="lazy">
+                                ${endingSoon ? '<span class="auction-badge ending">Ending Soon</span>' : ''}
+                                ${isLeading ? '<span class="auction-badge leading">You\'re Leading</span>' : ''}
+                            </a>
+                            <div class="auction-details">
+                                <a href="../item/${item.slug}.html">
+                                    <h3 class="auction-brand">${item.brand}</h3>
+                                    <h4 class="auction-title">${item.title}</h4>
+                                </a>
+                                <div class="auction-pricing">
+                                    <div class="current-bid">
+                                        <span class="bid-label" data-translate="auctions.current.bid">Current Bid</span>
+                                        <span class="bid-amount">${window.Render.currency(currentPrice)}</span>
+                                    </div>
+                                    ${myHighestBid ? `
+                                        <div class="your-bid">
+                                            <span class="bid-label" data-translate="auctions.your.bid">Your Bid</span>
+                                            <span class="bid-amount">${window.Render.currency(myHighestBid)}</span>
+                                        </div>
+                                    ` : ''}
+                                </div>
+                                <div class="auction-countdown">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="8" cy="8" r="6"/>
+                                        <path d="M8 4v4l3 2"/>
+                                    </svg>
+                                    <span>${window.Render.timeRemaining(item.endsAtISO)}</span>
+                                </div>
+                                <button class="btn-primary full-width"
+                                        onclick="openBidModal('${item.id}')"
+                                        data-translate="auctions.place.bid">Place Bid</button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                // Update stats
+                document.getElementById('total-auctions').textContent = auctionItems.length;
+                document.getElementById('your-bids').textContent = new Set(myBids.map(b => b.itemId)).size;
+                document.getElementById('ending-soon').textContent = auctionItems.filter(item => isEndingSoon(item.endsAtISO)).length;
+            }
+
+            // Open bid modal
+            window.openBidModal = function(itemId) {
+                const item = items.find(i => i.id === itemId);
+                const highestBid = getHighestBid(itemId) || item.price;
+                const minBid = highestBid + 50;
+
+                document.getElementById('bid-item-id').value = itemId;
+                document.getElementById('bid-item-image').src = item.cover;
+                document.getElementById('bid-item-image').alt = item.title;
+                document.getElementById('bid-item-title').textContent = item.title;
+                document.getElementById('bid-item-brand').textContent = item.brand;
+                document.getElementById('current-bid-amount').textContent = window.Render.currency(highestBid);
+                document.getElementById('bid-amount').value = '';
+                document.getElementById('bid-amount').min = minBid;
+                document.getElementById('bid-amount').setAttribute('data-min-amount', minBid);
+
+                window.UI.openModal('bid-modal');
+            };
+
+            // Setup bid form
+            window.Forms.setup('#bid-form', {
+                successMessage: 'Bid placed successfully!',
+                onSuccess: async (formData) => {
+                    const item = items.find(i => i.id === formData.itemId);
+                    await window.Forms.submitBid(
+                        formData.itemId,
+                        parseInt(formData.amount),
+                        item.title,
+                        item.brand
+                    );
+                    window.UI.closeModal();
+                    // Reload bids and re-render
+                    const updatedBids = window.DataService.getMyBids();
+                    myBids.length = 0;
+                    myBids.push(...updatedBids);
+                    renderAuctions();
+                }
+            });
+
+            // Initial render
+            renderAuctions();
+
+            // Update every 10 seconds
+            setInterval(renderAuctions, 10000);
+        })();
+    </script>
+
+
+</body></html>
