@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Active Auctions - SERIAE</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&amp;family=Inter:wght@200;300;400;500;600&amp;display=swap" rel="stylesheet">
     <script src="../assets/js/translations.js"></script>
 </head>
 <body>
@@ -124,15 +122,15 @@
     </main>
 
     <!-- Bid Modal -->
-    <div id="bid-modal" class="modal" role="dialog" aria-labelledby="bid-modal-title" aria-hidden="true">
+    <div id="bid-modal" class="modal" role="dialog" aria-labelledby="bid-modal-title" aria-hidden="true" aria-modal="true">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 id="bid-modal-title" data-translate="auctions.modal.title">Place Your Bid</h2>
-                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <button class="modal-close" aria-label="Close modal">×</button>
             </div>
             <div class="modal-body">
                 <div class="bid-item-info">
-                    <img id="bid-item-image" src="" alt="" class="bid-item-thumb">
+                    <img id="bid-item-image" src="" alt="" class="bid-item-thumb" loading="lazy" decoding="async">
                     <div>
                         <h3 id="bid-item-title"></h3>
                         <p id="bid-item-brand" class="bid-item-brand"></p>
@@ -142,13 +140,12 @@
                     <input type="hidden" id="bid-item-id" name="itemId">
                     <div class="form-group">
                         <label for="bid-amount" data-translate="auctions.form.amount">Bid Amount (USD)</label>
-                        <input type="number" id="bid-amount" name="amount" min="0" step="50" required
-                               data-validate="number,min-amount" class="form-control">
+                        <input type="number" id="bid-amount" name="amount" min="0" step="50" required="" data-validate="number,min-amount" class="form-control">
                         <p class="form-hint"><span data-translate="auctions.form.current">Current bid:</span> <span id="current-bid-amount"></span></p>
                     </div>
                     <div class="form-group">
                         <label class="checkbox-label">
-                            <input type="checkbox" name="terms" required>
+                            <input type="checkbox" name="terms" required="">
                             <span data-translate="auctions.form.terms">I agree to the auction terms and conditions</span>
                         </label>
                     </div>
@@ -170,7 +167,7 @@
             <div class="footer-section">
                 <h4 data-translate="footer.collections">Collections</h4>
                 <ul>
-                    <li><a href="../collections/index.html" data-translate="footer.handbags.accessories">Handbags & Accessories</a></li>
+                    <li><a href="../collections/index.html" data-translate="footer.handbags.accessories">Handbags &amp; Accessories</a></li>
                     <li><a href="../collections/index.html" data-translate="footer.fine.timepieces">Fine Timepieces</a></li>
                     <li><a href="../seller/register.html" data-translate="footer.private.consignment">Private Consignment</a></li>
                     <li><a href="../support/index.html" data-translate="footer.authentication.services">Authentication Services</a></li>
@@ -187,7 +184,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p data-translate="footer.copyright">&copy; 2024 Seriae. All rights reserved. | London | New York | Geneva</p>
+            <p data-translate="footer.copyright">© 2024 Seriae. All rights reserved. | London | New York | Geneva</p>
         </div>
     </footer>
 
@@ -336,5 +333,6 @@
             setInterval(renderAuctions, 10000);
         })();
     </script>
-</body>
-</html>
+
+
+</body></html>

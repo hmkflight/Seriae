@@ -1,0 +1,26 @@
+{
+  "name": "seriae-luxury-marketplace",
+  "version": "1.0.0",
+  "description": "SERIAE - Curated luxury resale marketplace",
+  "type": "module",
+  "scripts": {
+    "qa:prepare": "npx playwright install --with-deps chromium",
+    "qa:all": "node qa/run-all.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.9.1",
+    "@playwright/test": "^1.48.0",
+    "chalk": "^5.3.0",
+    "cheerio": "^1.0.0-rc.12",
+    "chrome-launcher": "^1.0.0",
+    "fs-extra": "^11.2.0",
+    "globby": "^14.0.2",
+    "lighthouse": "^12.2.0",
+    "micromatch": "^4.0.7",
+    "ora": "^8.1.0",
+    "pretty-bytes": "^6.1.1"
+  },
+  "dependencies": {
+    "axe-playwright": "^2.2.2"
+  }
+}

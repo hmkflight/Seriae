@@ -1,0 +1,169 @@
+[
+  {
+    "id": "color-contrast",
+    "impact": "serious",
+    "tags": [
+      "cat.color",
+      "wcag2aa",
+      "wcag143",
+      "TTv5",
+      "TT13.c",
+      "EN-301-549",
+      "EN-9.1.4.3",
+      "ACT",
+      "RGAAv4",
+      "RGAA-3.2.1"
+    ],
+    "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+    "nodes": [
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#0000ee",
+              "bgColor": "#0a0a0a",
+              "contrastRatio": 2.1,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<body>",
+                "target": [
+                  "body"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 2.1 (foreground color: #0000ee, background color: #0a0a0a, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"#main-content\" class=\"skip-to-content\" data-translate=\"accessibility.skip\">accessibility.skip</a>",
+        "target": [
+          ".skip-to-content"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.1 (foreground color: #0000ee, background color: #0a0a0a, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#0000ee",
+              "bgColor": "#000000",
+              "contrastRatio": 2.23,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<footer class=\"footer\">",
+                "target": [
+                  "footer"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 2.23 (foreground color: #0000ee, background color: #000000, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"../account/profile.html\" data-translate=\"footer.member.services\">Member Services</a>",
+        "target": [
+          "a[data-translate=\"footer.member.services\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #0000ee, background color: #000000, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      }
+    ]
+  },
+  {
+    "id": "heading-order",
+    "impact": "moderate",
+    "tags": [
+      "cat.semantics",
+      "best-practice"
+    ],
+    "description": "Ensure the order of headings is semantically correct",
+    "help": "Heading levels should only increase by one",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/heading-order?application=axeAPI",
+    "nodes": [
+      {
+        "any": [
+          {
+            "id": "heading-order",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "moderate",
+            "message": "Heading order invalid"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "moderate",
+        "html": "<h3>SERIAE</h3>",
+        "target": [
+          "h3"
+        ],
+        "failureSummary": "Fix any of the following:\n  Heading order invalid"
+      }
+    ]
+  },
+  {
+    "id": "list",
+    "impact": "serious",
+    "tags": [
+      "cat.structure",
+      "wcag2a",
+      "wcag131",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-9.3.1"
+    ],
+    "description": "Ensure that lists are structured correctly",
+    "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/list?application=axeAPI",
+    "nodes": [
+      {
+        "any": [],
+        "all": [],
+        "none": [
+          {
+            "id": "only-listitems",
+            "data": {
+              "values": "a"
+            },
+            "relatedNodes": [
+              {
+                "html": "<a href=\"../account/profile.html\" data-translate=\"footer.member.services\">Member Services</a>",
+                "target": [
+                  "a[data-translate=\"footer.member.services\"]"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "List element has direct children that are not allowed: a"
+          }
+        ],
+        "impact": "serious",
+        "html": "<ul>",
+        "target": [
+          ".footer-section:nth-child(3) > ul"
+        ],
+        "failureSummary": "Fix all of the following:\n  List element has direct children that are not allowed: a"
+      }
+    ]
+  }
+]

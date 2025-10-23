@@ -1,0 +1,1 @@
+[serious] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds (1 instances)
