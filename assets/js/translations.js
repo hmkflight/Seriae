@@ -249,6 +249,8 @@ const translations = {
         'collections.sort.price.desc': 'Price: High to Low',
         'collections.sort.brand': 'Brand A-Z',
         'collections.no.results': 'No items match your filters',
+        'collections.badge.auction': 'Auction',
+        'collections.badge.appointment': 'By Appointment',
 
         // Auctions
         'auctions.stat.active': 'Active Auctions',
@@ -276,9 +278,14 @@ const translations = {
 
         // Purchases
         'purchases.title': 'Purchase History',
-        'purchases.subtitle': 'Your acquisition collection',
-        'purchases.empty.title': 'No purchases yet',
-        'purchases.empty.subtitle': 'Start collecting exceptional pieces',
+        'purchases.subtitle': 'Your acquired luxury pieces',
+        'purchases.empty.title': 'No Purchase History',
+        'purchases.empty.subtitle': 'Your purchased items will appear here',
+        'purchases.browse': 'Browse Collections',
+        'purchases.purchased': 'Purchased:',
+        'purchases.price': 'Purchase Price:',
+        'purchases.contact.support': 'Contact Support',
+        'purchases.track': 'Track Shipment',
 
         // Accessibility
         'accessibility.skip': 'Skip to content',
