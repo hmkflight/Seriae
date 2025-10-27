@@ -489,10 +489,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const isProfileOrAccount = window.location.pathname.includes('/account/') ||
                                     window.location.pathname.includes('profile.html');
 
-        // Reduced motion settings for Profile/Account pages
-        const ROT_MAX = isProfileOrAccount ? 2 : 30;  // ±2 degrees for profile, 30 for others
-        const TX_MAX = isProfileOrAccount ? 8 : 5;     // ±8px for profile, 5px for others
-        const damping = isProfileOrAccount ? 0.1 : 1;  // Smooth damping for profile
+        // Reduced motion settings for Profile/Account pages (30% of original intensity)
+        const ROT_MAX = isProfileOrAccount ? 0.6 : 30;  // ±0.6 degrees for profile (30% of 2), 30 for others
+        const TX_MAX = isProfileOrAccount ? 2.4 : 5;    // ±2.4px for profile (30% of 8), 5px for others
+        const damping = isProfileOrAccount ? 0.03 : 1;  // Gentle damping for profile (30% of 0.1)
 
         cards.forEach(card => {
             let targetRotateX = 0;

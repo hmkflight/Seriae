@@ -2534,3 +2534,63 @@ html[lang="ja"] h6 {
         height: 200px;
     }
 }
+
+/* DEMO MODE BANNER */
+.demo-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(26, 93, 66, 0.15) 100%);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 8px 20px;
+    text-align: center;
+    z-index: 10001;
+    font-size: 13px;
+    color: var(--ivory);
+    letter-spacing: 0.5px;
+}
+
+.demo-banner-icon {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.demo-banner-text {
+    font-weight: 300;
+}
+
+/* Adjust main content when demo banner is present */
+body.demo-mode .navbar {
+    top: 35px;
+}
+
+body.demo-mode main {
+    margin-top: 125px;
+}
+
+body.demo-mode .dashboard-layout {
+    margin-top: 125px;
+}
+
+body.demo-mode .sidebar {
+    top: 125px;
+    height: calc(100vh - 125px);
+}
+
+@media (max-width: 768px) {
+    .demo-banner {
+        font-size: 11px;
+        padding: 6px 15px;
+    }
+
+    body.demo-mode .navbar {
+        top: 30px;
+    }
+
+    body.demo-mode main {
+        margin-top: 100px;
+    }
+}

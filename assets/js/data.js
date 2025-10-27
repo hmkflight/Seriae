@@ -1,227 +1,178 @@
-// DATA.JS - Data fetching and localStorage store management
-// Handles JSON loading with in-memory cache and localStorage-based delta store
+// DATA.JS - DEMO MODE
+// All backend/API/localStorage functionality commented out for presentation demo
 
 const DataService = {
     cache: {},
     store: {},
+    DEMO_MODE: true,
 
-    // Initialize store from localStorage
+    // Initialize store - DEMO MODE (localStorage disabled)
     init() {
-        const stored = localStorage.getItem('SERIAE_STORE');
-        if (stored) {
-            try {
-                this.store = JSON.parse(stored);
-            } catch (e) {
-                console.warn('Failed to parse stored data:', e);
-                this.store = {};
-            }
-        }
+        // DEMO MODE: localStorage disabled
+        // const stored = localStorage.getItem('SERIAE_STORE');
+        // if (stored) {
+        //     try {
+        //         this.store = JSON.parse(stored);
+        //     } catch (e) {
+        //         console.warn('Failed to parse stored data:', e);
+        //         this.store = {};
+        //     }
+        // }
+        console.log('✨ SERIAE Demo Mode Active - Backend disabled');
         return this;
     },
 
-    // Fetch JSON with caching
+    // Fetch JSON - DEMO MODE (fetch disabled)
     async fetchJSON(url) {
-        if (this.cache[url]) {
-            return this.cache[url];
-        }
-
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-            }
-            const data = await response.json();
-            this.cache[url] = data;
-            return data;
-        } catch (error) {
-            console.error(`Failed to fetch ${url}:`, error);
-            return null;
-        }
+        // DEMO MODE: All fetch calls disabled
+        // if (this.cache[url]) {
+        //     return this.cache[url];
+        // }
+        // try {
+        //     const response = await fetch(url);
+        //     if (!response.ok) {
+        //         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        //     }
+        //     const data = await response.json();
+        //     this.cache[url] = data;
+        //     return data;
+        // } catch (error) {
+        //     console.error(`Failed to fetch ${url}:`, error);
+        //     return null;
+        // }
+        return null;
     },
 
-    // Get all items
+    // Get all items - DEMO MODE
     async getItems() {
-        const data = await this.fetchJSON('/data/items.json');
-        return data?.items || [];
+        // DEMO MODE: Returns empty array
+        return [];
     },
 
-    // Get single item by slug
+    // Get single item by slug - DEMO MODE
     async getItemBySlug(slug) {
-        const items = await this.getItems();
-        return items.find(item => item.slug === slug);
+        return null;
     },
 
-    // Get items by category
+    // Get items by category - DEMO MODE
     async getItemsByCategory(category) {
-        const items = await this.getItems();
-        return items.filter(item => item.category === category);
+        return [];
     },
 
-    // Get items by status
+    // Get items by status - DEMO MODE
     async getItemsByStatus(status) {
-        const items = await this.getItems();
-        return items.filter(item => item.status === status);
+        return [];
     },
 
-    // Get auction data
+    // Get auction data - DEMO MODE
     async getAuctions() {
-        const data = await this.fetchJSON('/data/auctions.json');
-        return data || {};
+        return { active: [], history: [] };
     },
 
-    // Get user data
+    // Get user data - DEMO MODE
     async getUser() {
-        const data = await this.fetchJSON('/data/user.json');
-        return data || {};
+        return {};
     },
 
-    // Get exhibitions
+    // Get exhibitions - DEMO MODE
     async getExhibitions() {
-        const data = await this.fetchJSON('/data/exhibitions.json');
-        return data?.exhibitions || [];
+        return [];
     },
 
-    // Get consignments
+    // Get consignments - DEMO MODE
     async getConsignments() {
-        const data = await this.fetchJSON('/data/consignments.json');
-        return data || {};
+        return {};
     },
 
-    // Get posts
+    // Get posts - DEMO MODE
     async getPosts() {
-        const data = await this.fetchJSON('/data/posts.json');
-        return data?.posts || [];
+        return [];
     },
 
-    // Get post by slug
+    // Get post by slug - DEMO MODE
     async getPostBySlug(slug) {
-        const posts = await this.getPosts();
-        return posts.find(post => post.slug === slug);
+        return null;
     },
 
-    // WATCHLIST MANAGEMENT
+    // WATCHLIST MANAGEMENT - DEMO MODE (localStorage disabled)
     getWatchlist() {
-        const watchlist = localStorage.getItem('SERIAE_WATCH');
-        return watchlist ? JSON.parse(watchlist) : [];
+        // DEMO MODE: Returns empty array
+        return [];
     },
 
     addToWatchlist(itemId) {
-        const watchlist = this.getWatchlist();
-        if (!watchlist.includes(itemId)) {
-            watchlist.push(itemId);
-            localStorage.setItem('SERIAE_WATCH', JSON.stringify(watchlist));
-            return true;
-        }
+        // DEMO MODE: localStorage disabled
+        console.log('[DEMO] Watchlist add disabled');
         return false;
     },
 
     removeFromWatchlist(itemId) {
-        let watchlist = this.getWatchlist();
-        watchlist = watchlist.filter(id => id !== itemId);
-        localStorage.setItem('SERIAE_WATCH', JSON.stringify(watchlist));
-        return true;
+        // DEMO MODE: localStorage disabled
+        console.log('[DEMO] Watchlist remove disabled');
+        return false;
     },
 
     isInWatchlist(itemId) {
-        return this.getWatchlist().includes(itemId);
+        return false;
     },
 
     toggleWatchlist(itemId) {
-        if (this.isInWatchlist(itemId)) {
-            this.removeFromWatchlist(itemId);
-            return false;
-        } else {
-            this.addToWatchlist(itemId);
-            return true;
-        }
+        // DEMO MODE: localStorage disabled
+        console.log('[DEMO] Watchlist toggle disabled');
+        return false;
     },
 
-    // BIDS MANAGEMENT
+    // BIDS MANAGEMENT - DEMO MODE (localStorage disabled)
     getBids() {
-        const bids = localStorage.getItem('SERIAE_BIDS');
-        return bids ? JSON.parse(bids) : [];
+        return [];
     },
 
     addBid(itemId, amount, itemTitle, brand) {
-        const bids = this.getBids();
-        const bid = {
-            bidId: `user-bid-${Date.now()}`,
-            itemId,
-            itemTitle,
-            brand,
-            myAmount: amount,
-            currentHighBid: amount,
-            myStatus: 'winning',
-            placedAt: new Date().toISOString()
-        };
-        bids.push(bid);
-        localStorage.setItem('SERIAE_BIDS', JSON.stringify(bids));
-        return bid;
+        // DEMO MODE: localStorage disabled
+        console.log('[DEMO] Bid submission disabled');
+        return null;
     },
 
     getBidsByItemId(itemId) {
-        return this.getBids().filter(bid => bid.itemId === itemId);
+        return [];
     },
 
-    // LEADS MANAGEMENT (contact forms, interest submissions)
+    // LEADS MANAGEMENT - DEMO MODE (localStorage disabled)
     getLeads() {
-        const leads = localStorage.getItem('SERIAE_LEADS');
-        return leads ? JSON.parse(leads) : [];
+        return [];
     },
 
     addLead(leadData) {
-        const leads = this.getLeads();
-        const lead = {
-            id: `lead-${Date.now()}`,
-            timestamp: new Date().toISOString(),
-            ...leadData
-        };
-        leads.push(lead);
-        localStorage.setItem('SERIAE_LEADS', JSON.stringify(leads));
-        return lead;
+        // DEMO MODE: localStorage disabled
+        console.log('[DEMO] Lead submission disabled');
+        return null;
     },
 
-    // SELLER SUBMISSIONS
+    // SELLER SUBMISSIONS - DEMO MODE (localStorage disabled)
     getSubmissions() {
-        const submissions = localStorage.getItem('SERIAE_SUBMISSIONS');
-        return submissions ? JSON.parse(submissions) : [];
+        return [];
     },
 
     addSubmission(submissionData) {
-        const submissions = this.getSubmissions();
-        const submission = {
-            id: `sub-${Date.now()}`,
-            submittedAt: new Date().toISOString(),
-            status: 'In Review',
-            ...submissionData
-        };
-        submissions.push(submission);
-        localStorage.setItem('SERIAE_SUBMISSIONS', JSON.stringify(submissions));
-        return submission;
+        // DEMO MODE: localStorage disabled
+        console.log('[DEMO] Seller submission disabled');
+        return null;
     },
 
-    // USER DATA UPDATES
+    // USER DATA UPDATES - DEMO MODE (localStorage disabled)
     updateUserProfile(updates) {
-        const userData = this.store.userProfile || {};
-        Object.assign(userData, updates);
-        this.store.userProfile = userData;
-        localStorage.setItem('SERIAE_STORE', JSON.stringify(this.store));
-        return userData;
+        // DEMO MODE: localStorage disabled
+        console.log('[DEMO] Profile update disabled');
+        return {};
     },
 
     getUserProfile() {
-        return this.store.userProfile || null;
+        return null;
     },
 
-    // CLEAR ALL DATA (for testing)
+    // CLEAR ALL DATA - DEMO MODE
     clearAllData() {
-        localStorage.removeItem('SERIAE_WATCH');
-        localStorage.removeItem('SERIAE_BIDS');
-        localStorage.removeItem('SERIAE_LEADS');
-        localStorage.removeItem('SERIAE_SUBMISSIONS');
-        localStorage.removeItem('SERIAE_STORE');
-        this.cache = {};
-        this.store = {};
+        console.log('[DEMO] Data clearing disabled');
     }
 };
 

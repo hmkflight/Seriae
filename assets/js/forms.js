@@ -1,6 +1,9 @@
-// FORMS.JS - Form validation and mock submission with simulated latency
+// FORMS.JS - DEMO MODE
+// Form validation enabled, but all submissions show demo mode alert
 
 const Forms = {
+    DEMO_MODE: true,
+
     // Validate form with built-in HTML5 validation + custom rules
     validate(form) {
         const errors = [];
@@ -90,7 +93,7 @@ const Forms = {
         }
     },
 
-    // Mock submit with simulated latency
+    // Mock submit - DEMO MODE (shows alert instead of saving)
     async mockSubmit(form, storageKey, successMessage = 'Submitted successfully') {
         const errors = this.validate(form);
 
@@ -116,32 +119,27 @@ const Forms = {
             data[key] = value;
         });
 
-        // Store in localStorage
-        if (storageKey) {
-            const existing = localStorage.getItem(storageKey);
-            const items = existing ? JSON.parse(existing) : [];
-            items.push({
-                ...data,
-                id: `${storageKey}-${Date.now()}`,
-                timestamp: new Date().toISOString()
-            });
-            localStorage.setItem(storageKey, JSON.stringify(items));
-        }
+        // DEMO MODE: Show alert instead of saving to localStorage
+        // localStorage.setItem(storageKey, JSON.stringify(items));
 
         // Reset button
         submitBtn.disabled = false;
         submitBtn.textContent = originalText;
 
-        // Show success
-        window.UI.toast(successMessage, 'success');
+        // Show demo mode alert
+        if (window.UI && window.UI.toast) {
+            window.UI.toast('🎭 DEMO MODE: Form submission disabled for presentation', 'info');
+        } else {
+            alert('🎭 DEMO MODE\n\nThis is a presentation demo. Form submissions are disabled.\n\nIn the live version, this would save your data.');
+        }
 
-        // Reset form
-        form.reset();
+        // DON'T reset form in demo mode so they can see their inputs
+        // form.reset();
 
         return { success: true, data };
     },
 
-    // Setup form with auto-validation and submission
+    // Setup form with auto-validation and submission - DEMO MODE
     setup(formSelector, options = {}) {
         const form = typeof formSelector === 'string'
             ? document.querySelector(formSelector)
@@ -197,53 +195,61 @@ const Forms = {
         });
     },
 
-    // Handle bid submission
+    // Handle bid submission - DEMO MODE
     async submitBid(itemId, amount, itemTitle, brand) {
         // Simulate latency
         await new Promise(resolve => setTimeout(resolve, 700));
 
-        // Add bid to localStorage
-        const bid = window.DataService.addBid(itemId, amount, itemTitle, brand);
+        // DEMO MODE: Show alert instead of adding bid
+        console.log('[DEMO] Bid submission disabled');
 
-        return { success: true, bid };
+        if (window.UI && window.UI.toast) {
+            window.UI.toast('🎭 DEMO MODE: Bid submission disabled', 'info');
+        }
+
+        return { success: false, message: 'Demo mode - submissions disabled' };
     },
 
-    // Handle interest/lead submission
+    // Handle interest/lead submission - DEMO MODE
     async submitInterest(itemId, itemTitle, contactInfo) {
         await new Promise(resolve => setTimeout(resolve, 600));
 
-        const lead = window.DataService.addLead({
-            type: 'interest',
-            itemId,
-            itemTitle,
-            ...contactInfo
-        });
+        // DEMO MODE: Show alert instead of adding lead
+        console.log('[DEMO] Interest submission disabled');
 
-        return { success: true, lead };
+        if (window.UI && window.UI.toast) {
+            window.UI.toast('🎭 DEMO MODE: Interest submission disabled', 'info');
+        }
+
+        return { success: false, message: 'Demo mode - submissions disabled' };
     },
 
-    // Handle product submission (seller)
+    // Handle product submission (seller) - DEMO MODE
     async submitProduct(productData) {
         await new Promise(resolve => setTimeout(resolve, 800));
 
-        const submission = window.DataService.addSubmission({
-            type: 'product',
-            ...productData
-        });
+        // DEMO MODE: Show alert instead of adding submission
+        console.log('[DEMO] Product submission disabled');
 
-        return { success: true, submission };
+        if (window.UI && window.UI.toast) {
+            window.UI.toast('🎭 DEMO MODE: Product submission disabled', 'info');
+        }
+
+        return { success: false, message: 'Demo mode - submissions disabled' };
     },
 
-    // Handle contact form
+    // Handle contact form - DEMO MODE
     async submitContact(contactData) {
         await new Promise(resolve => setTimeout(resolve, 650));
 
-        const lead = window.DataService.addLead({
-            type: 'contact',
-            ...contactData
-        });
+        // DEMO MODE: Show alert instead of adding lead
+        console.log('[DEMO] Contact submission disabled');
 
-        return { success: true, lead };
+        if (window.UI && window.UI.toast) {
+            window.UI.toast('🎭 DEMO MODE: Contact form disabled', 'info');
+        }
+
+        return { success: false, message: 'Demo mode - submissions disabled' };
     }
 };
 

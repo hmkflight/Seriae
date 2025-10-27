@@ -614,17 +614,20 @@ const translations = {
 // Translation utility functions
 const Translation = {
     currentLanguage: 'en',
+    DEMO_MODE: true,
 
-    // Initialize translation system
+    // Initialize translation system - DEMO MODE (localStorage disabled)
     init() {
-        // Get saved language or default to English
-        this.currentLanguage = localStorage.getItem('seriae-language') || 'en';
+        // DEMO MODE: Always default to English, localStorage disabled
+        // this.currentLanguage = localStorage.getItem('seriae-language') || 'en';
+        this.currentLanguage = 'en';
 
         // Set HTML lang attribute
         document.documentElement.setAttribute('lang', this.currentLanguage);
 
         this.updateLanguageToggle();
         this.translatePage();
+        console.log('✨ Translation system initialized (Demo Mode - English only)');
     },
 
     // Get translation for a key
@@ -632,14 +635,15 @@ const Translation = {
         return translations[this.currentLanguage][key] || translations.en[key] || key;
     },
 
-    // Switch language
+    // Switch language - DEMO MODE (localStorage disabled, still functions for display)
     switchLanguage(lang) {
         if (translations[lang]) {
             // Add loading class for transition effect
             document.body.classList.add('language-changing');
 
             this.currentLanguage = lang;
-            localStorage.setItem('seriae-language', lang);
+            // DEMO MODE: localStorage disabled
+            // localStorage.setItem('seriae-language', lang);
 
             // Update HTML lang attribute
             document.documentElement.setAttribute('lang', lang);
@@ -657,7 +661,7 @@ const Translation = {
                 detail: { language: lang }
             }));
 
-            console.log(`✨ Language switched to: ${lang === 'ja' ? '日本語' : 'English'}`);
+            console.log(`✨ Language switched to: ${lang === 'ja' ? '日本語' : 'English'} (Demo Mode)`);
         }
     },
 
