@@ -1,1 +1,0 @@
-[serious] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds (33 instances)\n[moderate] heading-order: Ensure the order of headings is semantically correct (1 instances)\n[critical] select-name: Ensure select element has an accessible name (2 instances)

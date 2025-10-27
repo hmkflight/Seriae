@@ -1,0 +1,61 @@
+runtime: python39
+
+handlers:
+# Serve all static files directly
+- url: /assets
+  static_dir: assets
+  secure: always
+
+- url: /data
+  static_dir: data
+  secure: always
+
+- url: /(.+\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|json|xml|txt|pdf))$
+  static_files: \1
+  upload: (.+\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|json|xml|txt|pdf))$
+  secure: always
+
+# Serve HTML files
+- url: /
+  static_files: index.html
+  upload: index.html
+  secure: always
+
+- url: /(.+)\.html$
+  static_files: \1.html
+  upload: (.+)\.html$
+  secure: always
+
+# Serve directories with index.html
+- url: /(.+)/
+  static_files: \1/index.html
+  upload: (.+)/index.html
+  secure: always
+
+- url: /(.+)
+  static_files: \1/index.html
+  upload: (.+)/index.html
+  secure: always
+
+# 404 page
+- url: /.*
+  static_files: 404.html
+  upload: 404.html
+  secure: always
+
+# Skip files
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^node_modules/.*$
+- ^scripts/.*$
+- ^qa/.*$
+- ^\.git/.*$
+- ^README\.md$
+- ^package\.json$
+- ^package-lock\.json$
+- ^PHASE.*\.md$
+- ^SEO.*\.md$

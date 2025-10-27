@@ -1,1 +1,0 @@
-[serious] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds (2 instances)\n[moderate] heading-order: Ensure the order of headings is semantically correct (1 instances)\n[serious] list: Ensure that lists are structured correctly (1 instances)

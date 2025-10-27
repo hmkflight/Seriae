@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - SERIAE</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="../assets/js/translations.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html"><h1>SERIAE</h1></a>
+            </div>
+            <div class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="../dashboard.html" class="nav-link">Dashboard</a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span>Buyer Menu</span> <span class="dropdown-arrow">�</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../collections/index.html" class="dropdown-item">Browse Collections</a>
+                        <a href="../auctions/index.html" class="dropdown-item">Active Auctions</a>
+                        <a href="../auctions/history.html" class="dropdown-item">Bidding History</a>
+                        <a href="../watchlist/index.html" class="dropdown-item">Watchlist</a>
+                        <a href="../purchases/index.html" class="dropdown-item">Purchase History</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span>Seller Menu</span> <span class="dropdown-arrow">�</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../seller/register.html" class="dropdown-item">Product Registration</a>
+                        <a href="../seller/products.html" class="dropdown-item">Product List</a>
+                        <a href="../seller/exhibitions.html" class="dropdown-item">Exhibition List</a>
+                        <a href="../seller/analytics.html" class="dropdown-item">Sales Analytics</a>
+                        <a href="../seller/consignment.html" class="dropdown-item">Consignment Status</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger"><span>User Management</span> <span class="dropdown-arrow">�</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../legal/terms.html" class="dropdown-item">Terms of Use</a>
+                        <a href="../support/contact.html" class="dropdown-item">Contact Us</a>
+                        <a href="../support/index.html" class="dropdown-item">Support Center</a>
+                        <a href="../legal/privacy.html" class="dropdown-item">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-dropdown language-toggle">
+                    <a href="#" class="nav-link dropdown-trigger">EN <span class="dropdown-arrow">�</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" data-lang="en">English</a>
+                        <a href="#" class="dropdown-item" data-lang="ja">�,�</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown profile-menu">
+                    <a href="#" class="nav-link dropdown-trigger profile-trigger"><span>Profile</span> <span class="dropdown-arrow">�</span></a>
+                    <div class="dropdown-menu profile-dropdown">
+                        <div class="profile-header">
+                            <div class="profile-avatar">S</div>
+                            <div class="profile-info">
+                                <span class="profile-name">Seriae Member</span>
+                                <span class="profile-status">Premium</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="../account/profile.html" class="dropdown-item">My Profile</a>
+                        <a href="../account/settings.html" class="dropdown-item" aria-current="page">Account Settings</a>
+                        <a href="../account/addresses.html" class="dropdown-item">Shipping Address</a>
+                        <a href="../account/payment.html" class="dropdown-item">Bank Accounts</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="../index.html" class="dropdown-item logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Account Settings</h1>
+                <p>Manage your account preferences and security</p>
+            </div>
+        </section>
+
+        <section class="collections-grid" style="padding: 80px 40px;">
+            <div class="container" style="max-width: 900px; margin: 0 auto;">
+                <div style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">
+
+                    <h2 style="color: var(--ivory); font-size: 32px; margin: 40px 0 20px; font-weight: 300;">Personal Information</h2>
+
+                    <div style="padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--divider-gold); border-radius: 8px; margin-bottom: 30px;">
+                        <p style="margin-bottom: 15px;"><strong style="color: var(--champagne-gold);">Full Name:</strong> Seriae Member</p>
+                        <p style="margin-bottom: 15px;"><strong style="color: var(--champagne-gold);">Email:</strong> member@example.com</p>
+                        <p style="margin-bottom: 15px;"><strong style="color: var(--champagne-gold);">Phone:</strong> +44 20 1234 5678</p>
+                        <p style="margin-bottom: 15px;"><strong style="color: var(--champagne-gold);">Member Since:</strong> January 2024</p>
+                        <p style="margin-bottom: 0;"><strong style="color: var(--champagne-gold);">Membership Tier:</strong> Premium</p>
+                    </div>
+
+                    <h2 style="color: var(--ivory); font-size: 32px; margin: 60px 0 20px; font-weight: 300;">Notification Preferences</h2>
+
+                    <div style="padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--divider-gold); border-radius: 8px; margin-bottom: 30px;">
+                        <div style="margin-bottom: 20px;">
+                            <p style="margin-bottom: 8px;"><strong style="color: var(--champagne-gold);">Email Notifications</strong></p>
+                            <p style="font-size: 14px; color: var(--text-muted);">Receive updates about new collections, auctions, and exclusive offers</p>
+                            <p style="margin-top: 10px; color: var(--champagne-gold);">✓ Enabled</p>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <p style="margin-bottom: 8px;"><strong style="color: var(--champagne-gold);">Auction Alerts</strong></p>
+                            <p style="font-size: 14px; color: var(--text-muted);">Get notified when you're outbid or when watched items are ending soon</p>
+                            <p style="margin-top: 10px; color: var(--champagne-gold);">✓ Enabled</p>
+                        </div>
+                        <div style="margin-bottom: 0;">
+                            <p style="margin-bottom: 8px;"><strong style="color: var(--champagne-gold);">Marketing Communications</strong></p>
+                            <p style="font-size: 14px; color: var(--text-muted);">Promotional emails and special event invitations</p>
+                            <p style="margin-top: 10px; color: var(--text-secondary);">✗ Disabled</p>
+                        </div>
+                    </div>
+
+                    <h2 style="color: var(--ivory); font-size: 32px; margin: 60px 0 20px; font-weight: 300;">Security Settings</h2>
+
+                    <div style="padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--divider-gold); border-radius: 8px; margin-bottom: 30px;">
+                        <div style="margin-bottom: 20px;">
+                            <p style="margin-bottom: 8px;"><strong style="color: var(--champagne-gold);">Password</strong></p>
+                            <p style="font-size: 14px; color: var(--text-muted);">Last changed: January 15, 2024</p>
+                            <p style="margin-top: 10px; color: var(--champagne-gold); font-size: 14px;">Change Password</p>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <p style="margin-bottom: 8px;"><strong style="color: var(--champagne-gold);">Two-Factor Authentication</strong></p>
+                            <p style="font-size: 14px; color: var(--text-muted);">Add an extra layer of security to your account</p>
+                            <p style="margin-top: 10px; color: var(--champagne-gold);">✓ Enabled</p>
+                        </div>
+                        <div style="margin-bottom: 0;">
+                            <p style="margin-bottom: 8px;"><strong style="color: var(--champagne-gold);">Active Sessions</strong></p>
+                            <p style="font-size: 14px; color: var(--text-muted);">Currently logged in on 2 devices</p>
+                            <p style="margin-top: 10px; color: var(--champagne-gold); font-size: 14px;">Manage Sessions</p>
+                        </div>
+                    </div>
+
+                    <h2 style="color: var(--ivory); font-size: 32px; margin: 60px 0 20px; font-weight: 300;">Privacy & Data</h2>
+
+                    <div style="padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--divider-gold); border-radius: 8px; margin-bottom: 30px;">
+                        <p style="margin-bottom: 20px;">Manage your privacy settings and download your data. For more information, review our <a href="../legal/privacy.html" style="color: var(--champagne-gold); text-decoration: none;">Privacy Policy</a>.</p>
+                        <p style="margin-bottom: 10px; color: var(--champagne-gold); font-size: 14px;">Download My Data</p>
+                        <p style="margin-bottom: 0; color: var(--text-muted); font-size: 14px;">Request Account Deletion</p>
+                    </div>
+
+                    <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--divider-gold); text-align: center;">
+                        <p style="color: var(--text-muted); font-size: 14px;">Last updated: January 1, 2024</p>
+                        <p style="color: var(--text-muted); font-size: 14px; margin-top: 10px;">SERIAE � 2024. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SERIAE</h3>
+                <p>Curating excellence in luxury resale since 1987</p>
+            </div>
+            <div class="footer-section">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="../collections/index.html">Handbags & Accessories</a></li>
+                    <li><a href="../collections/index.html">Fine Timepieces</a></li>
+                    <li><a href="../seller/register.html">Private Consignment</a></li>
+                    <li><a href="../support/index.html">Authentication Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Experience</h4>
+                <ul>
+                    <li><a href="../support/index.html">Private Showroom</a></li>
+                    <li><a href="../support/contact.html">Personal Curator</a></li>
+                    <li><a href="../account/profile.html">Member Services</a></li>
+                    <li><a href="../support/index.html">Heritage Stories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Seriae. All rights reserved. | London | New York | Geneva</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
