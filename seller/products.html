@@ -100,19 +100,19 @@
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <span class="stat-number" id="total-products">0</span>
+                        <span class="stat-number" id="total-products">6</span>
                         <span class="stat-label" data-translate="seller.products.stat.total">Total Products</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number" id="active-listings">0</span>
+                        <span class="stat-number" id="active-listings">3</span>
                         <span class="stat-label" data-translate="seller.products.stat.active">Active Listings</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number" id="sold-items">0</span>
+                        <span class="stat-number" id="sold-items">2</span>
                         <span class="stat-label" data-translate="seller.products.stat.sold">Sold</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number" id="total-revenue">$0</span>
+                        <span class="stat-number" id="total-revenue">$32,750</span>
                         <span class="stat-label" data-translate="seller.products.stat.revenue">Total Revenue</span>
                     </div>
                 </div>
@@ -136,16 +136,211 @@
         <section class="products-list">
             <div class="container">
                 <div id="products-table" class="table-container">
-                    <!-- Products will be rendered here -->
-                </div>
-                <div id="no-products" class="empty-state" style="display: none;">
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="12" y="12" width="40" height="40" rx="2"/>
-                        <path d="M12 24h40M24 12v12M40 12v12"/>
-                    </svg>
-                    <h2 data-translate="seller.products.empty.title">No Products Yet</h2>
-                    <p data-translate="seller.products.empty.subtitle">Submit your first luxury item for consignment</p>
-                    <a href="register.html" class="btn-primary" data-translate="seller.products.empty.cta">Register Product</a>
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Product Name</th>
+                                <th>Brand</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Date Listed</th>
+                                <th>Performance</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="product-row">
+                                <td>
+                                    <div class="product-image">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" style="background: rgba(212, 175, 55, 0.1); border-radius: 4px; padding: 8px;">
+                                            <rect x="8" y="15" width="44" height="35" rx="2"/>
+                                            <circle cx="22" cy="27" r="4"/>
+                                            <path d="M8 40l12-12 10 10M35 32l8-8 9 9v14"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-cell">
+                                        <strong>Hermès</strong>
+                                        <span>Birkin 30 Black Togo</span>
+                                    </div>
+                                </td>
+                                <td>Hermès</td>
+                                <td>Handbags</td>
+                                <td><span class="status-badge status-listed">Listed</span></td>
+                                <td>Jan 15, 2024</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span>142 views</span>
+                                        <span>28 watchers</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-text">View</button>
+                                        <button class="btn-text">Edit Price</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="product-row">
+                                <td>
+                                    <div class="product-image">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" style="background: rgba(212, 175, 55, 0.1); border-radius: 4px; padding: 8px;">
+                                            <circle cx="30" cy="30" r="18"/>
+                                            <circle cx="30" cy="30" r="12"/>
+                                            <path d="M30 18v-6M30 48v-6M42 30h6M12 30h6"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-cell">
+                                        <strong>Rolex</strong>
+                                        <span>Submariner Date 41mm</span>
+                                    </div>
+                                </td>
+                                <td>Rolex</td>
+                                <td>Timepieces</td>
+                                <td><span class="status-badge status-sold">Sold</span></td>
+                                <td>Dec 20, 2023</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="sold-price">$18,500</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-text">Details</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="product-row">
+                                <td>
+                                    <div class="product-image">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" style="background: rgba(212, 175, 55, 0.1); border-radius: 4px; padding: 8px;">
+                                            <rect x="8" y="15" width="44" height="35" rx="2"/>
+                                            <circle cx="22" cy="27" r="4"/>
+                                            <path d="M8 40l12-12 10 10M35 32l8-8 9 9v14"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-cell">
+                                        <strong>Chanel</strong>
+                                        <span>Classic Flap Medium Caviar</span>
+                                    </div>
+                                </td>
+                                <td>Chanel</td>
+                                <td>Handbags</td>
+                                <td><span class="status-badge status-pending-review">Pending Review</span></td>
+                                <td>Jan 28, 2024</td>
+                                <td>—</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-text">Edit</button>
+                                        <button class="btn-text danger">Cancel</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="product-row">
+                                <td>
+                                    <div class="product-image">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" style="background: rgba(212, 175, 55, 0.1); border-radius: 4px; padding: 8px;">
+                                            <path d="M12 30c0-9.941 8.059-18 18-18s18 8.059 18 18-8.059 18-18 18-18-8.059-18-18z"/>
+                                            <circle cx="30" cy="30" r="6"/>
+                                            <path d="M30 12v6M30 42v6M42 30h6M12 30h6M38.5 21.5l4.243-4.243M17.257 42.743l4.243-4.243"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-cell">
+                                        <strong>Cartier</strong>
+                                        <span>Love Bracelet Rose Gold</span>
+                                    </div>
+                                </td>
+                                <td>Cartier</td>
+                                <td>Jewelry</td>
+                                <td><span class="status-badge status-listed">Listed</span></td>
+                                <td>Jan 8, 2024</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span>89 views</span>
+                                        <span>15 watchers</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-text">View</button>
+                                        <button class="btn-text">Edit Price</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="product-row">
+                                <td>
+                                    <div class="product-image">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" style="background: rgba(212, 175, 55, 0.1); border-radius: 4px; padding: 8px;">
+                                            <rect x="8" y="15" width="44" height="35" rx="2"/>
+                                            <circle cx="22" cy="27" r="4"/>
+                                            <path d="M8 40l12-12 10 10M35 32l8-8 9 9v14"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-cell">
+                                        <strong>Louis Vuitton</strong>
+                                        <span>Neverfull MM Monogram</span>
+                                    </div>
+                                </td>
+                                <td>Louis Vuitton</td>
+                                <td>Handbags</td>
+                                <td><span class="status-badge status-sold">Sold</span></td>
+                                <td>Nov 10, 2023</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="sold-price">$1,850</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-text">Details</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="product-row">
+                                <td>
+                                    <div class="product-image">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" style="background: rgba(212, 175, 55, 0.1); border-radius: 4px; padding: 8px;">
+                                            <circle cx="30" cy="30" r="18"/>
+                                            <circle cx="30" cy="30" r="12"/>
+                                            <path d="M30 18v-6M30 48v-6M42 30h6M12 30h6"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-cell">
+                                        <strong>Patek Philippe</strong>
+                                        <span>Nautilus 5711 Blue Dial</span>
+                                    </div>
+                                </td>
+                                <td>Patek Philippe</td>
+                                <td>Timepieces</td>
+                                <td><span class="status-badge status-listed">Listed</span></td>
+                                <td>Jan 22, 2024</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span>256 views</span>
+                                        <span>47 watchers</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-text">View</button>
+                                        <button class="btn-text">Edit Price</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>

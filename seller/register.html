@@ -235,6 +235,61 @@
                             </fieldset>
 
                             <fieldset>
+                                <legend data-translate="seller.register.section.photos">Product Photos</legend>
+
+                                <div class="form-group">
+                                    <label data-translate="seller.register.field.photos">Upload Photos *</label>
+                                    <div class="photo-upload-grid">
+                                        <div class="photo-upload-box">
+                                            <input type="file" id="photo-1" name="photos[]" accept="image/*" style="display: none;">
+                                            <label for="photo-1" class="photo-upload-label">
+                                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="6" y="12" width="36" height="28" rx="2"/>
+                                                    <circle cx="18" cy="22" r="3"/>
+                                                    <path d="M6 32l10-10 8 8M30 26l6-6 6 6v12"/>
+                                                </svg>
+                                                <span>Main Image</span>
+                                            </label>
+                                        </div>
+                                        <div class="photo-upload-box">
+                                            <input type="file" id="photo-2" name="photos[]" accept="image/*" style="display: none;">
+                                            <label for="photo-2" class="photo-upload-label">
+                                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="6" y="12" width="36" height="28" rx="2"/>
+                                                    <circle cx="18" cy="22" r="3"/>
+                                                    <path d="M6 32l10-10 8 8M30 26l6-6 6 6v12"/>
+                                                </svg>
+                                                <span>Detail Shot</span>
+                                            </label>
+                                        </div>
+                                        <div class="photo-upload-box">
+                                            <input type="file" id="photo-3" name="photos[]" accept="image/*" style="display: none;">
+                                            <label for="photo-3" class="photo-upload-label">
+                                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="6" y="12" width="36" height="28" rx="2"/>
+                                                    <circle cx="18" cy="22" r="3"/>
+                                                    <path d="M6 32l10-10 8 8M30 26l6-6 6 6v12"/>
+                                                </svg>
+                                                <span>Serial/Tag</span>
+                                            </label>
+                                        </div>
+                                        <div class="photo-upload-box">
+                                            <input type="file" id="photo-4" name="photos[]" accept="image/*" style="display: none;">
+                                            <label for="photo-4" class="photo-upload-label">
+                                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="6" y="12" width="36" height="28" rx="2"/>
+                                                    <circle cx="18" cy="22" r="3"/>
+                                                    <path d="M6 32l10-10 8 8M30 26l6-6 6 6v12"/>
+                                                </svg>
+                                                <span>Additional</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <p class="form-hint" data-translate="seller.register.hint.photos">Upload at least 3 high-quality photos showing different angles. Maximum 8 photos.</p>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
                                 <legend data-translate="seller.register.section.contact">Contact Information</legend>
 
                                 <div class="form-row">
@@ -291,7 +346,7 @@
 
                             <div class="form-actions">
                                 <button type="button" class="btn-secondary" onclick="window.history.back()" data-translate="common.cancel">Cancel</button>
-                                <button type="submit" class="btn-primary" data-translate="seller.register.submit">Submit for Review</button>
+                                <button type="submit" class="btn-primary demo-tooltip-trigger" data-translate="seller.register.submit" title="Demo Mode: Form submission disabled for presentation">Submit for Review (Demo Only)</button>
                             </div>
                         </form>
                     </div>
